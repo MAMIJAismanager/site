@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "owner": "MMJ-05N-J",
+  "claimId": "pac_96f544c7f59b2c37de5d92de",
+  "claimType": "PUBLICATION_AUTHORIZATION",
+  "fixtureOnly": true,
+  "repository": "MAMIJAismanager/MMJ-site",
+  "branch": "main",
+  "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+  "promotionSequence": 1,
+  "promotionEnvelopeDigest": "sha256:9e1c513471add6f85541279fab1263bef975b0b68029cc4430cd851c23361482",
+  "authorizationGrantDigest": "sha256:f8113eb479723f0a78a5c4065d4ceecc6d9843e400236cd7b06c2e9ee7321c37",
+  "governancePolicyDigest": "sha256:9cf0cede032a6a9a445b61717fbddc48cfaaca6336ce1259d666070753e7796d",
+  "assurance": {
+    "mode": "DEVELOPMENT_FIXTURE",
+    "requiredDecisions": 1,
+    "validDecisions": 1,
+    "distinctHumanCount": 1,
+    "trueSeparationOfDuties": false,
+    "exceptionUsed": false,
+    "breakGlass": false
+  },
+  "issuedAt": "2026-07-18T15:06:00.000Z",
+  "validUntil": "2026-07-18T16:30:00.000Z",
+  "keyId": "govk_fixture_2026_07",
+  "signature": {
+    "algorithm": "Ed25519",
+    "domain": "MMJ-05N-J-PUBLIC-AUTHORIZATION-CLAIM-V1",
+    "valueBase64": "KVxheL04eit9eRBs94CDJqZ7MVA3B5onJWDT831y6ZqwJv57o4OrT8ie1718FHZJmxMuFLon2dox47gbeu99Dw=="
+  }
+}

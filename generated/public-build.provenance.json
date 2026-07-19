@@ -1,0 +1,31 @@
+{
+  "advisoryReceiptDigest": "sha256:5e838c54df533eed20b387c01b0991fd19a055b71f34c495f3e8be4233cbf926",
+  "builder": {
+    "fixtureExecution": "local-process-contract",
+    "image": "node:22.16.0-bookworm-slim",
+    "indexDigest": "sha256:048ed02c5fd52e86fda6fbd2f6a76cf0d4492fd6c6fee9e2c463ed5108da0e34",
+    "linuxAmd64ManifestDigest": "sha256:1471ea646673136b8308550ac14b36d847ffb21c24bc31828279e443c924e488",
+    "mode": "DEVELOPMENT_FIXTURE",
+    "productionPublished": false,
+    "schemaVersion": 1
+  },
+  "dependencyGraphDigest": "sha256:d64ddc41d9c3925d93304220e95f641d9528dc8ae1c14ef50d82d731fa29441c",
+  "fixtureOnly": true,
+  "inputSetDigest": "sha256:78a3d3e4afad16cdc1c089aa4929cd955dec6f5601ab80a14ad9ad4ca9c2231d",
+  "keyId": "mmj-build-provenance-ed25519-fixture-2026-07",
+  "mode": "DEVELOPMENT_FIXTURE",
+  "nodeVersion": "v22.16.0",
+  "npmVersion": "10.9.2",
+  "outputManifestDigest": "sha256:9cc4beddf8483caf5acbd8e2466e1f0f25a77d4bc0528c27e6f29bd4940fdcde",
+  "packageLockDigest": "sha256:1562f9b1d7df338d7f0efa9e9cf3fdbf3203603067cbbc488367291b3074853a",
+  "payloadTreeDigest": "sha256:624211d7016985bf7fbbf29be3582621187a731894c8dfcc4ccd06bb744638d8",
+  "promotionSequence": 1,
+  "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+  "repository": "MAMIJAismanager/MMJ-site",
+  "reproducibilityReceiptDigest": "sha256:fbc087980cfa274a562d4417a10aba7db5658e9939f3b08108e0ec501f5dc566",
+  "sbomDigest": "sha256:244a27c46387b0a89c2167e5dc45ebd8403099c64426ff467ce901deaefff9d5",
+  "schemaVersion": 1,
+  "signature": "1kTGzVcowEYwclDkc8LsifxhoNTPma6MEHSraBM7jTy+gkRo9CGhTchktBkTp1L2eesUuy+KkLa2d01TQhRsCg==",
+  "signedAt": "2026-07-18T16:00:00.000Z",
+  "statementType": "MMJ_BUILD_PAYLOAD_PROVENANCE"
+}

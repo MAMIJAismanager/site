@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "owner": "MMJ-05N-J",
+  "keys": [
+    {
+      "keyId": "govk_fixture_2026_07",
+      "algorithm": "Ed25519",
+      "publicKeySpkiBase64": "MCowBQYDK2VwAyEAlG/MeZmtVH9hgT955XoXbrF/pAKlLQPeohyzibtqdd0=",
+      "status": "active",
+      "validFrom": "2026-07-18T00:00:00.000Z",
+      "validUntil": null,
+      "fixtureOnly": true
+    }
+  ]
+}

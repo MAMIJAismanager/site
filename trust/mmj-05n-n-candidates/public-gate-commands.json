@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "commands": {
+    "keys": "node scripts/public-05n-n-key-registry-gate.mjs",
+    "epochBake": "node scripts/public-05n-n-trust-epoch-gate.mjs --allow-fixture",
+    "epochProduction": "node scripts/public-05n-n-trust-epoch-gate.mjs",
+    "baselineBake": "node scripts/public-05n-n-clean-history-baseline-gate.mjs --allow-fixture",
+    "fixtureRetirementBake": "node scripts/public-05n-n-fixture-retirement-gate.mjs --allow-fixture",
+    "regression": "node scripts/public-05n-n-regression-gate.mjs",
+    "gateBake": "node scripts/public-05n-n-gate.mjs --allow-fixture",
+    "gateProduction": "node scripts/public-05n-n-gate.mjs"
+  },
+  "classification": "POST_BUILD_TRUST_BOOTSTRAP_EVIDENCE",
+  "runtimeImported": false
+}

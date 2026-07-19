@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "owner": "MMJ-05N-M",
+  "epochId": "tre_dd1cab390595c5abd880e90a",
+  "epochSequence": 1,
+  "previousEpochDigest": null,
+  "validFromPromotionSequence": 1,
+  "validThroughPromotionSequence": 1,
+  "validFrom": "2026-07-18T17:20:00.000Z",
+  "validUntil": "2026-07-19T17:20:00.000Z",
+  "mode": "DEVELOPMENT_FIXTURE",
+  "fixtureOnly": true,
+  "registries": [
+    {
+      "purpose": "release-promotion",
+      "path": "trust/public-release-signing-keys.json",
+      "registryDigest": {
+        "digestType": "TRUST_REGISTRY_CANONICAL_V1",
+        "algorithm": "sha256",
+        "value": "sha256:75bdc0d723e170879f4048943a51c7ff433787d07d6ea6cc31d1bbd256540aab",
+        "subject": {
+          "path": "trust/public-release-signing-keys.json",
+          "jsonPointer": ""
+        },
+        "canonicalization": "MMJ_CANONICAL_JSON_V1"
+      },
+      "fixtureOnly": true
+    },
+    {
+      "purpose": "build-provenance",
+      "path": "trust/build-provenance-keys.json",
+      "registryDigest": {
+        "digestType": "TRUST_REGISTRY_CANONICAL_V1",
+        "algorithm": "sha256",
+        "value": "sha256:b0333b779ac8b37f677cc1abcf904e7eda25b89ed0a0655004d2e0970e35ca29",
+        "subject": {
+          "path": "trust/build-provenance-keys.json",
+          "jsonPointer": ""
+        },
+        "canonicalization": "MMJ_CANONICAL_JSON_V1"
+      },
+      "fixtureOnly": true
+    },
+    {
+      "purpose": "continuity-readiness",
+      "path": "trust/continuity-readiness-keys.json",
+      "registryDigest": {
+        "digestType": "TRUST_REGISTRY_CANONICAL_V1",
+        "algorithm": "sha256",
+        "value": "sha256:155ef0178b5f0e36a3d370aff93019b5de542b58e64ac5e59858f1d76ab9cb3b",
+        "subject": {
+          "path": "trust/continuity-readiness-keys.json",
+          "jsonPointer": ""
+        },
+        "canonicalization": "MMJ_CANONICAL_JSON_V1"
+      },
+      "fixtureOnly": true
+    },
+    {
+      "purpose": "governance-authorization",
+      "path": "trust/governance-authorization-keys.json",
+      "registryDigest": {
+        "digestType": "TRUST_REGISTRY_CANONICAL_V1",
+        "algorithm": "sha256",
+        "value": "sha256:40e47d8c27420352e73a4616033d71914664f5eef75203bfc1e9a58b56fc3f12",
+        "subject": {
+          "path": "trust/governance-authorization-keys.json",
+          "jsonPointer": ""
+        },
+        "canonicalization": "MMJ_CANONICAL_JSON_V1"
+      },
+      "fixtureOnly": true
+    },
+    {
+      "purpose": "software-composition-security",
+      "path": "trust/software-composition-security-keys.json",
+      "registryDigest": {
+        "digestType": "TRUST_REGISTRY_CANONICAL_V1",
+        "algorithm": "sha256",
+        "value": "sha256:0ab2f7a9cfbb20bc409565e970fa6ea4bc07f079bc04f42ea4339db3fef3f94e",
+        "subject": {
+          "path": "trust/software-composition-security-keys.json",
+          "jsonPointer": ""
+        },
+        "canonicalization": "MMJ_CANONICAL_JSON_V1"
+      },
+      "fixtureOnly": true
+    }
+  ],
+  "keyId": "mmj-release-admission-root-ed25519-fixture-2026-07",
+  "signature": {
+    "algorithm": "Ed25519",
+    "domain": "MMJ-05N-M-TRUST-EPOCH-V1",
+    "valueBase64": "VgcE8Qmnlow1jhHsQ4zti3s9qIcI+RQ559CeFllROruY+jzN/X9R7RJxP4K7YeIWXmNL1sCohG/Pj0Al1fdDAg=="
+  }
+}

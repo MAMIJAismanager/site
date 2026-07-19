@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "owner": "MMJ-05N-I",
+  "keyPurpose": "continuity-publication-readiness",
+  "keys": [
+    {
+      "keyId": "mmj-continuity-readiness-bake-proof-2026-07",
+      "status": "retired",
+      "fixtureOnly": true,
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAXe+2YM9OQwMkTsrRWU3S0zFlah0KDcIpaKRWCymVggw=\n-----END PUBLIC KEY-----\n",
+      "fingerprint": "sha256:789658764a116453174a2165a3e88b5d51d21b8479439cb60b7e9773f90dff12"
+    }
+  ]
+}

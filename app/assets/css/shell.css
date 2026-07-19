@@ -1,0 +1,186 @@
+.mm-shell-frame {
+  width: min(
+    calc(100% - (var(--mm-page-gutter) * 2)),
+    var(--mm-content-max)
+  );
+  margin-inline: auto;
+}
+
+.mm-layout {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-height: 100dvh;
+}
+
+.mm-main {
+  min-width: 0;
+}
+
+.mm-skip-link {
+  position: fixed;
+  inset-block-start: var(--mm-space-3);
+  inset-inline-start: var(--mm-space-3);
+  z-index: 100;
+  padding: var(--mm-space-2) var(--mm-space-4);
+  border-radius: var(--mm-radius-small);
+  background: var(--mm-color-surface);
+  color: var(--mm-color-on-surface);
+  font-weight: var(--mm-font-weight-semibold);
+  transform: translateY(calc(-100% - var(--mm-space-6)));
+  transition:
+    transform
+    var(--mm-duration-fast)
+    var(--mm-ease-standard);
+}
+
+.mm-skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.mm-site-header {
+  border-block-end: 1px solid var(--mm-color-border);
+}
+
+.mm-site-header__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--mm-space-4);
+  min-height: 4.5rem;
+  padding-block: var(--mm-space-3);
+}
+
+.mm-site-header__brand {
+  width: fit-content;
+  font-size: var(--mm-font-size-subheading);
+  font-weight: var(--mm-font-weight-bold);
+  line-height: var(--mm-line-height-heading);
+  letter-spacing: var(--mm-letter-spacing-heading);
+  text-decoration: none;
+}
+
+.mm-site-header__menu-button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: var(--mm-space-2) var(--mm-space-3);
+  border: 1px solid var(--mm-color-border-strong);
+  border-radius: var(--mm-radius-small);
+  background: transparent;
+  color: var(--mm-color-text);
+  font-weight: var(--mm-font-weight-semibold);
+  cursor: pointer;
+}
+
+.mm-site-header__navigation {
+  display: none;
+  grid-column: 1 / -1;
+}
+
+.mm-site-header[data-menu-open='true'] .mm-site-header__navigation {
+  display: block;
+}
+
+.mm-site-navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mm-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mm-site-navigation__link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  color: var(--mm-color-text-muted);
+  font-weight: var(--mm-font-weight-semibold);
+  text-decoration: none;
+}
+
+.mm-site-navigation__link:hover,
+.mm-site-navigation__link[aria-current='page'] {
+  color: var(--mm-color-text);
+}
+
+.mm-site-navigation__link[aria-current='page'] {
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.3em;
+}
+
+.mm-site-footer {
+  border-block-start: 1px solid var(--mm-color-border);
+}
+
+.mm-site-footer__inner {
+  display: grid;
+  gap: var(--mm-space-5);
+  padding-block: var(--mm-space-6);
+}
+
+.mm-site-footer__brand {
+  width: fit-content;
+  font-weight: var(--mm-font-weight-bold);
+  text-decoration: none;
+}
+
+.mm-site-footer__top-link {
+  width: fit-content;
+  color: var(--mm-color-text-muted);
+  font-weight: var(--mm-font-weight-semibold);
+}
+
+@media (min-width: 48rem) {
+  .mm-site-header__inner {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .mm-site-header__menu-button {
+    display: none;
+  }
+
+  .mm-site-header__navigation {
+    display: block;
+    grid-column: auto;
+    justify-self: end;
+  }
+
+  .mm-site-navigation__list {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--mm-space-5);
+  }
+
+  .mm-site-footer__inner {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .mm-site-footer .mm-site-navigation {
+    justify-self: center;
+  }
+
+  .mm-site-footer__top-link {
+    justify-self: end;
+  }
+}
+
+/*
+ * MMJ-UI02 top-level viewport contract
+ * 1920x1080 is the desktop SSOT. Smaller/larger surfaces remain responsive.
+ */
+@media (min-width: 80rem) and (min-height: 45rem) {
+  .mm-layout--viewport-locked {
+    grid-template-rows: auto minmax(0, 1fr);
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .mm-layout--viewport-locked .mm-main {
+    min-height: 0;
+    overflow: hidden;
+  }
+}

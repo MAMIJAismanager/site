@@ -1,0 +1,116 @@
+.mm-works-query {
+  display: grid;
+  gap: var(--mm-space-5);
+  max-width: 88rem;
+  padding: clamp(1rem, 2vw, 1.75rem);
+  border: 1px solid var(--mm-color-border);
+  border-radius: var(--mm-radius-medium);
+  background: var(--mm-color-surface-subtle);
+}
+
+.mm-works-query__search,
+.mm-works-query__field {
+  display: grid;
+  gap: var(--mm-space-2);
+  min-width: 0;
+}
+
+.mm-works-query__search-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--mm-space-2);
+}
+
+.mm-works-query__filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--mm-space-4);
+}
+
+.mm-works-query__label {
+  font-size: var(--mm-font-size-small);
+  font-weight: var(--mm-font-weight-semibold);
+  line-height: var(--mm-line-height-meta);
+}
+
+.mm-works-query__control,
+.mm-works-query__button,
+.mm-works-query__reset {
+  min-height: 2.75rem;
+  border: 1px solid var(--mm-color-border-strong);
+  border-radius: var(--mm-radius-small);
+  font: inherit;
+}
+
+.mm-works-query__control {
+  min-width: 0;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  background: var(--mm-paper-50);
+  color: var(--mm-color-text);
+}
+
+.mm-works-query__button,
+.mm-works-query__reset {
+  padding: 0.65rem 1rem;
+  background: var(--mm-color-surface);
+  color: var(--mm-color-on-surface);
+  cursor: pointer;
+}
+
+.mm-works-query__reset {
+  justify-self: start;
+}
+
+.mm-works-query__control:disabled,
+.mm-works-query__button:disabled,
+.mm-works-query__reset:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.mm-works-query__control:focus-visible,
+.mm-works-query__button:focus-visible,
+.mm-works-query__reset:focus-visible {
+  outline: 0.1875rem solid var(--mm-color-focus);
+  outline-offset: 0.1875rem;
+}
+
+.mm-works-result-summary {
+  margin: 0;
+  color: var(--mm-color-text-muted);
+  font-size: var(--mm-font-size-small);
+  line-height: var(--mm-line-height-meta);
+}
+
+.mm-works-result-summary__status:empty {
+  display: none;
+}
+
+.mm-works-query-empty {
+  display: grid;
+  justify-items: start;
+  gap: var(--mm-space-4);
+  padding-block: var(--mm-space-7);
+}
+
+@media (min-width: 48rem) {
+  .mm-works-query__filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 80rem) {
+  .mm-works-query {
+    grid-template-columns: minmax(18rem, 1.2fr) minmax(0, 3fr) auto;
+    align-items: end;
+  }
+
+  .mm-works-query__filters {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .mm-works-query__reset {
+    align-self: end;
+  }
+}

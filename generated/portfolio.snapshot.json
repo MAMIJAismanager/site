@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 2,
+  "publicationCutoff": "2026-07-12T00:00:00Z",
+  "projects": [
+    {
+      "schemaVersion": 2,
+      "id": "prj_pub00001",
+      "slug": "published-work",
+      "title": "공개 작업 Fixture",
+      "category": "video",
+      "gatewayCategoryIds": [
+        "choreography",
+        "video-production"
+      ],
+      "roles": [
+        "video-director"
+      ],
+      "tags": [
+        {
+          "token": "portfolio",
+          "label": "포트폴리오"
+        }
+      ],
+      "timing": {
+        "year": 2026,
+        "releaseDate": "2026-07-11"
+      },
+      "client": null,
+      "summary": "빌드 시점 공개 route 결선을 검증하는 저장소 Fixture입니다.",
+      "description": "이 레코드는 실제 경력이나 실적이 아니라 MMJ-01E의 Snapshot 및 정적 route 결선을 검증하기 위한 임시 콘텐츠입니다.",
+      "credits": [
+        {
+          "id": "creative",
+          "label": "Creative",
+          "entries": [
+            {
+              "role": "연출",
+              "name": "매미저",
+              "href": null
+            }
+          ]
+        }
+      ],
+      "externalLinks": [],
+      "relatedProjectIds": [
+        "prj_due00001"
+      ],
+      "assets": {
+        "coverAssetId": "ast_cov00001",
+        "backdropAssetId": null,
+        "primaryAssetId": "ast_vid00001",
+        "galleryAssetIds": []
+      },
+      "featured": true,
+      "order": 10,
+      "seo": {
+        "title": "공개 작업 Fixture | 매미: 著",
+        "description": "MMJ-01E 공개 작업 route 결선 Fixture입니다.",
+        "ogAssetId": "ast_cov00001",
+        "indexable": true
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "prj_due00001",
+      "slug": "scheduled-due",
+      "title": "경계의 시간",
+      "category": "video",
+      "gatewayCategoryIds": [
+        "project-planning",
+        "audio-mixing-mastering"
+      ],
+      "roles": [
+        "video-director"
+      ],
+      "tags": [
+        {
+          "token": "portfolio",
+          "label": "포트폴리오"
+        }
+      ],
+      "timing": {
+        "year": 2026,
+        "releaseDate": "2026-07-12"
+      },
+      "client": null,
+      "summary": "한 시점에 맞춰 영상과 사운드를 구성한 작업입니다.",
+      "description": "정해진 공개 시점에 맞춰 영상 연출과 오디오 구성을 결합한 포트폴리오 작업입니다.",
+      "credits": [
+        {
+          "id": "creative",
+          "label": "Creative",
+          "entries": [
+            {
+              "role": "구성",
+              "name": "매미저",
+              "href": null
+            }
+          ]
+        }
+      ],
+      "externalLinks": [],
+      "relatedProjectIds": [
+        "prj_pub00001"
+      ],
+      "assets": {
+        "coverAssetId": "ast_art00001",
+        "backdropAssetId": null,
+        "primaryAssetId": "ast_aud00001",
+        "galleryAssetIds": []
+      },
+      "featured": false,
+      "order": 20,
+      "seo": {
+        "title": "경계의 시간 | 매미: 著",
+        "description": "영상과 사운드가 한 흐름으로 이어지는 작업입니다.",
+        "ogAssetId": "ast_art00001",
+        "indexable": true
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "prj_hid00001",
+      "slug": "voice-synthesis-engine-assistant",
+      "title": "음성합성엔진 조교 Fixture",
+      "category": "video",
+      "gatewayCategoryIds": [
+        "voice-synthesis-engine-assistant"
+      ],
+      "roles": [
+        "video-director"
+      ],
+      "tags": [
+        {
+          "token": "voice-synthesis",
+          "label": "음성합성"
+        },
+        {
+          "token": "local-engine",
+          "label": "로컬 엔진"
+        }
+      ],
+      "timing": {
+        "year": 2026,
+        "releaseDate": "2026-07-11"
+      },
+      "client": "ASH LOCAL ENGINE",
+      "summary": "브랜드 명판의 더블클릭으로만 열리는 음성합성엔진 조교 작업입니다.",
+      "description": "숨은 카테고리 진입과 세션 권한 판정을 검증하는 임시 작업입니다.",
+      "credits": [
+        {
+          "id": "creative",
+          "label": "Creative",
+          "entries": [
+            {
+              "role": "연출",
+              "name": "매미저",
+              "href": null
+            }
+          ]
+        }
+      ],
+      "externalLinks": [],
+      "relatedProjectIds": [
+        "prj_due00001"
+      ],
+      "assets": {
+        "coverAssetId": "ast_cov00001",
+        "backdropAssetId": null,
+        "primaryAssetId": "ast_vid00001",
+        "galleryAssetIds": []
+      },
+      "featured": false,
+      "order": 35,
+      "seo": {
+        "title": "음성합성엔진 조교 Fixture",
+        "description": "숨은 카테고리 세션 진입 검증용 작업입니다.",
+        "ogAssetId": "ast_cov00001",
+        "indexable": false
+      }
+    }
+  ],
+  "assets": [
+    {
+      "schemaVersion": 2,
+      "id": "ast_art00001",
+      "kind": "image",
+      "label": "오디오 Artwork Fixture",
+      "caption": null,
+      "credit": "매미저",
+      "defaultRenditionId": "primary-webp",
+      "renditions": [
+        {
+          "id": "primary-webp",
+          "purpose": "primary",
+          "objectKey": "assets/image/ast_art00001/primary.webp",
+          "mediaType": "image/webp",
+          "byteSize": 1000,
+          "sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "metadata": {
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ],
+      "altText": "오디오 artwork 참조 검증용 이미지 Fixture."
+    },
+    {
+      "schemaVersion": 2,
+      "id": "ast_aud00001",
+      "kind": "audio",
+      "label": "예약 공개 오디오 Fixture",
+      "caption": null,
+      "credit": "매미저",
+      "defaultRenditionId": "primary-mp3",
+      "renditions": [
+        {
+          "id": "primary-mp3",
+          "purpose": "primary",
+          "objectKey": "assets/audio/ast_aud00001/primary.mp3",
+          "mediaType": "audio/mpeg",
+          "byteSize": 1500,
+          "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+          "metadata": {
+            "durationMs": 9000
+          }
+        }
+      ],
+      "artworkAssetId": "ast_art00001"
+    },
+    {
+      "schemaVersion": 2,
+      "id": "ast_cov00001",
+      "kind": "image",
+      "label": "공개 작업 Cover Fixture",
+      "caption": null,
+      "credit": "매미저",
+      "defaultRenditionId": "primary-webp",
+      "renditions": [
+        {
+          "id": "primary-webp",
+          "purpose": "primary",
+          "objectKey": "assets/image/ast_cov00001/primary.webp",
+          "mediaType": "image/webp",
+          "byteSize": 1000,
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "metadata": {
+            "width": 1600,
+            "height": 1200
+          }
+        }
+      ],
+      "altText": "공개 작업 route 검증용 대표 이미지 Fixture."
+    },
+    {
+      "schemaVersion": 2,
+      "id": "ast_pos00001",
+      "kind": "image",
+      "label": "영상 Poster Fixture",
+      "caption": null,
+      "credit": "매미저",
+      "defaultRenditionId": "primary-webp",
+      "renditions": [
+        {
+          "id": "primary-webp",
+          "purpose": "primary",
+          "objectKey": "assets/image/ast_pos00001/primary.webp",
+          "mediaType": "image/webp",
+          "byteSize": 1000,
+          "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "metadata": {
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      ],
+      "altText": "영상 poster 참조 검증용 이미지 Fixture."
+    },
+    {
+      "schemaVersion": 2,
+      "id": "ast_vid00001",
+      "kind": "video",
+      "label": "공개 영상 Fixture",
+      "caption": null,
+      "credit": "매미저",
+      "defaultRenditionId": "primary-mp4",
+      "renditions": [
+        {
+          "id": "primary-mp4",
+          "purpose": "primary",
+          "objectKey": "assets/video/ast_vid00001/primary.mp4",
+          "mediaType": "video/mp4",
+          "byteSize": 2000,
+          "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "metadata": {
+            "width": 1920,
+            "height": 1080,
+            "durationMs": 12000,
+            "hasAudio": true
+          }
+        }
+      ],
+      "posterAssetId": "ast_pos00001"
+    }
+  ]
+}

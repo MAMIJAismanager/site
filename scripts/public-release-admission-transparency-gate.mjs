@@ -1,0 +1,1 @@
+import {verifyTransparency} from './public-05n-m-common.mjs';const x=await verifyTransparency();console.log(JSON.stringify({event:'PASS_MMJ_05N_M_PUBLIC_TRANSPARENCY',lineCount:x.lines.length,head:x.head.entryDigest},null,2));

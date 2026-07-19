@@ -1,0 +1,1 @@
+import {verifyPublicDisclosure,verifyCrossClaims} from './public-05n-m-common.mjs';await verifyPublicDisclosure();const x=await verifyCrossClaims();console.log(JSON.stringify({event:'PASS_MMJ_05N_M_PUBLIC_CONTRACT',edgeDigest:x.edgeDigest},null,2));

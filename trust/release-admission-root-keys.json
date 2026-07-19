@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "owner": "MMJ-05N-M",
+  "purpose": "release-admission-root",
+  "keys": [
+    {
+      "keyId": "mmj-release-admission-root-ed25519-fixture-2026-07",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAtQFcyt6pN9OoJko/fVU5QP03/owPTlKx7NW8NA/L4aY=\n-----END PUBLIC KEY-----\n",
+      "status": "fixture-only",
+      "validFromEpoch": 1,
+      "validThroughEpoch": 1,
+      "validForProduction": false
+    }
+  ]
+}

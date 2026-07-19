@@ -1,0 +1,27 @@
+import fsp from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';
+export const root=process.cwd();export const canonical=v=>Array.isArray(v)?v.map(canonical):(v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])])):v);export const stable=v=>JSON.stringify(canonical(v),null,2)+'\n';export const digestBytes=b=>'sha256:'+crypto.createHash('sha256').update(b).digest('hex');export const digest=v=>digestBytes(typeof v==='string'||Buffer.isBuffer(v)?v:stable(v));export const readJson=async p=>JSON.parse(await fsp.readFile(path.resolve(root,p),'utf8'));
+export function lockStats(lock){
+  let resolved=0,internal=0,publicNpm=0,missingIntegrity=0;
+  const nodes=[];
+  for(const [loc,v] of Object.entries(lock.packages||{})){
+    if(v.resolved){
+      resolved++;
+      if(/applied-caas-gateway|artifactory\/api\/npm/i.test(v.resolved))internal++;
+      if(v.resolved.startsWith('https://registry.npmjs.org/'))publicNpm++;
+      if(!v.integrity)missingIntegrity++;
+    }
+    if(loc&&v.version){
+      const name=loc.split('node_modules/').at(-1);
+      nodes.push({id:`${name}@${v.version}#${loc}`,name,version:v.version,location:loc,integrity:v.integrity||null,resolved:v.resolved||null,dev:!!v.dev,optional:!!v.optional,hasInstallScript:!!v.hasInstallScript});
+    }
+  }
+  nodes.sort((a,b)=>a.id.localeCompare(b.id));
+  return {resolved,internal,publicNpm,missingIntegrity,nodes,graphDigest:digest(nodes)};
+}
+export async function workflowState(){const d=path.resolve(root,'.github/workflows');const mutable=[],actions=[];for(const n of (await fsp.readdir(d)).sort()){if(!/\.ya?ml$/.test(n))continue;const t=await fsp.readFile(path.join(d,n),'utf8');for(const m of t.matchAll(/uses:\s*([^\s#]+)/g)){actions.push({workflow:n,ref:m[1]});if(!/@[0-9a-f]{40}$/.test(m[1]))mutable.push({workflow:n,ref:m[1]});}if(/ubuntu-latest|node-version:\s*['"]?22['"]?(?:\s|$)/m.test(t))mutable.push({workflow:n,ref:'mutable-toolchain'});for(const block of t.split(/(?=\n\s*-\s)/)){if(/actions\/checkout@[0-9a-f]{40}/.test(block)&&!/persist-credentials:\s*false/.test(block))mutable.push({workflow:n,ref:'checkout-persists-credentials'});}}return {actions,mutable};}
+export function verifySignature(obj,key){const {signature,keyId,...payload}=obj;return crypto.verify(null,Buffer.from(stable(payload)),crypto.createPublicKey(key),Buffer.from(signature,'base64'));}
+export async function verifyPolicy(){const p=await readJson('supply-chain/public-supply-chain-policy.json');const t=await readJson('supply-chain/public-toolchain-lock.json');if(p.node!=='22.16.0'||p.npm!=='10.9.2'||t.node!==p.node||t.npm!==p.npm)throw new Error('MMJ_05N_K_PUBLIC_TOOLCHAIN_DRIFT');if(!/@sha256:[0-9a-f]{64}$/.test(t.builderImage))throw new Error('MMJ_05N_K_BUILDER_DIGEST_REQUIRED');const pkg=await readJson('package.json');if(pkg.engines?.node!==p.node||pkg.engines?.npm!==p.npm||pkg.packageManager!==`npm@${p.npm}`)throw new Error('MMJ_05N_K_PACKAGE_TOOLCHAIN_DRIFT');return {policy:p,toolchain:t};}
+export async function verifyLock(){const s=lockStats(await readJson('package-lock.json'));if(s.internal)throw new Error('MMJ_05N_K_FORBIDDEN_REGISTRY_ORIGIN');if(s.missingIntegrity)throw new Error('MMJ_05N_K_LOCK_INTEGRITY_MISSING');if(s.resolved!==s.publicNpm)throw new Error('MMJ_05N_K_REGISTRY_NOT_PUBLIC');return s;}
+export async function verifyActions(){const s=await workflowState();if(s.mutable.length)throw new Error(`MMJ_05N_K_MUTABLE_CI_REFERENCE:${JSON.stringify(s.mutable)}`);return s;}
+export async function verifySbom(){const lock=await verifyLock();const graph=await readJson('supply-chain/public-dependency-graph.json');const sbom=await readJson('supply-chain/public-sbom.spdx.json');if(graph.graphDigest!==lock.graphDigest||graph.nodeCount!==lock.nodes.length)throw new Error('MMJ_05N_K_DEPENDENCY_GRAPH_DRIFT');if(sbom.packages.length!==graph.nodes.length)throw new Error('MMJ_05N_K_SBOM_GRAPH_MISMATCH');return {nodeCount:graph.nodes.length,sbomDigest:digest(sbom),graphDigest:graph.graphDigest};}
+export async function verifyProvenance({allowFixture=false}={}){const keys=await readJson('trust/build-provenance-keys.json');const prov=await readJson('generated/public-build.provenance.json');const seal=await readJson('generated/public-build-artifact-seal.json');const key=keys.keys.find(k=>k.keyId===prov.keyId);if(!key)throw new Error('MMJ_05N_K_PROVENANCE_KEY_UNKNOWN');if(prov.fixtureOnly&&!allowFixture)throw new Error('MMJ_05N_K_FIXTURE_PROVENANCE_FORBIDDEN');if(!verifySignature(prov,key.publicKeyPem))throw new Error('MMJ_05N_K_PROVENANCE_SIGNATURE_INVALID');const sk=keys.keys.find(k=>k.keyId===seal.keyId);if(!sk||!verifySignature(seal,sk.publicKeyPem))throw new Error('MMJ_05N_K_ARTIFACT_SEAL_SIGNATURE_INVALID');const manifest=await readJson('supply-chain/public-output-manifest.json');const sbom=await readJson('supply-chain/public-sbom.spdx.json');if(prov.payloadTreeDigest!==manifest.treeDigest||prov.outputManifestDigest!==digest(manifest)||prov.sbomDigest!==digest(sbom))throw new Error('MMJ_05N_K_PROVENANCE_EVIDENCE_MISMATCH');if(seal.provenanceDigest!==digest(prov)||seal.payloadTreeDigest!==prov.payloadTreeDigest)throw new Error('MMJ_05N_K_ARTIFACT_SEAL_MISMATCH');return {provenanceDigest:digest(prov),sealedArtifactDigest:seal.sealedArtifactDigest,fixtureOnly:!!prov.fixtureOnly};}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "purpose": "continuity-readiness",
+  "registrySequence": 2,
+  "previousRegistryDigest": "sha256:f0a96391621413243cc5d2fdc57cac2f006f0e90315635ca3c686fc9df339701",
+  "status": "candidate-fixture",
+  "fixtureOnly": true,
+  "validForProduction": false,
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "keys": [
+    {
+      "keyId": "mmj-continuity-readiness-ed25519-candidate-fixture-2026-07-3",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAMt5qmHwj9yvtaBHcnsGx9cS2xr2i/nhfx1PoewSeTr4=\n-----END PUBLIC KEY-----\n",
+      "publicKeyFingerprint": "sha256:3c475397a18086d941fe68b7608ecedd90a52c6731abf4d742e709bf856eb531",
+      "status": "candidate-fixture",
+      "fixtureOnly": true,
+      "validForProduction": false
+    }
+  ],
+  "candidateStatementDigest": "sha256:eb8f991fce2e424bec27cda656ce7d7be99edf7e32ca24a801c8a41fb91a7be8"
+}

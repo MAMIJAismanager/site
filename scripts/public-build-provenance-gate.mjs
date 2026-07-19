@@ -1,0 +1,1 @@
+import {verifyProvenance} from './public-05n-k-common.mjs';const allowFixture=process.argv.includes('--allow-fixture');console.log(JSON.stringify({event:'PASS_MMJ_05N_K_PUBLIC_PROVENANCE',...(await verifyProvenance({allowFixture}))}));

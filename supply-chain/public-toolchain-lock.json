@@ -1,0 +1,9 @@
+{
+  "builderImage": "node:22.16.0-bookworm-slim@sha256:1471ea646673136b8308550ac14b36d847ffb21c24bc31828279e443c924e488",
+  "locale": "C.UTF-8",
+  "node": "22.16.0",
+  "npm": "10.9.2",
+  "schemaVersion": 1,
+  "sourceDateEpoch": "1784378700",
+  "timezone": "UTC"
+}

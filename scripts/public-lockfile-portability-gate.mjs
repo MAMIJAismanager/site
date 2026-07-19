@@ -1,0 +1,1 @@
+import {verifyLock} from './public-05n-k-common.mjs';const r=await verifyLock();console.log(JSON.stringify({event:'PASS_MMJ_05N_K_PUBLIC_LOCK',resolved:r.resolved,internal:r.internal,publicNpm:r.publicNpm,missingIntegrity:r.missingIntegrity,nodeCount:r.nodes.length,graphDigest:r.graphDigest}));

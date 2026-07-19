@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "epochSequence": 2,
+  "previousEpochSequence": 1,
+  "bootstrapTransition": "FIXTURE_TO_PRODUCTION",
+  "mode": "PRODUCTION_CANDIDATE_FIXTURE",
+  "activationStatus": "inactive-candidate",
+  "fixtureOnly": true,
+  "productionAllowed": false,
+  "registries": [
+    {
+      "purpose": "release-promotion",
+      "path": "trust/mmj-05n-n-candidates/release-promotion.registry-v2.json",
+      "registryDigest": "sha256:29d9e468640ca83248f731b23e1d1dfb5faf7015ed446db136838bed74d28ffa",
+      "fixtureOnly": true,
+      "independentPublicationVerified": false
+    },
+    {
+      "purpose": "build-provenance",
+      "path": "trust/mmj-05n-n-candidates/build-provenance.registry-v2.json",
+      "registryDigest": "sha256:f2a4dde57fdb0fdc30cb266101c3781b55f19e725a467b146c72ef27e8267e05",
+      "fixtureOnly": true,
+      "independentPublicationVerified": false
+    },
+    {
+      "purpose": "continuity-readiness",
+      "path": "trust/mmj-05n-n-candidates/continuity-readiness.registry-v2.json",
+      "registryDigest": "sha256:1d15e0c6d9d8c8955b77f8993b7c0be8fa73532d6460a23570371e38703f0a63",
+      "fixtureOnly": true,
+      "independentPublicationVerified": false
+    },
+    {
+      "purpose": "governance-authorization",
+      "path": "trust/mmj-05n-n-candidates/governance-authorization.registry-v2.json",
+      "registryDigest": "sha256:af64d48bf19bf6e8c203e08e855abca766ebd90506ceabe8c4c54e0f63ae03a3",
+      "fixtureOnly": true,
+      "independentPublicationVerified": false
+    },
+    {
+      "purpose": "software-composition-security",
+      "path": "trust/mmj-05n-n-candidates/software-composition-security.registry-v2.json",
+      "registryDigest": "sha256:b09445c93fc5344f2d7564734e4536fc158bcda6bf2a99313938bf82af704eae",
+      "fixtureOnly": true,
+      "independentPublicationVerified": false
+    },
+    {
+      "purpose": "release-admission-root",
+      "path": "trust/mmj-05n-n-candidates/release-admission-root.registry-v2.json",
+      "registryDigest": "sha256:b7b4e52937eee078b9c38dc2002cbeff8ef346b8e108f9f6353c3f9883dc447a",
+      "fixtureOnly": true,
+      "independentPublicationVerified": false
+    }
+  ],
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "candidateDigest": "sha256:56bf9a55bfe4eac1b1dc6724f31399ef96a93d4ef19b1ecffe49fd940bc24f64"
+}

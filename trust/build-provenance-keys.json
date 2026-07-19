@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "algorithm": "Ed25519",
+      "keyId": "mmj-build-provenance-ed25519-fixture-2026-07",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAMhiByYbDjLNToa3q4xEmVk/FvzWoBeDdClmXqmcasXQ=\n-----END PUBLIC KEY-----\n",
+      "status": "fixture-only",
+      "validForProduction": false
+    }
+  ],
+  "schemaVersion": 1
+}

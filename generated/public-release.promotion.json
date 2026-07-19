@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "contract": "MMJ-05N-C",
+  "promotionId": "prm_0445273627e5ed967955351e17",
+  "payload": {
+    "schemaVersion": 1,
+    "contract": "MMJ-05N-C",
+    "payloadType": "PUBLIC_RELEASE_PROMOTION_V1",
+    "promotionKind": "forward",
+    "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+    "promotionSequence": 1,
+    "previousPromotionId": null,
+    "previousBundleDigest": null,
+    "rollbackSourcePromotionId": null,
+    "bundleDigest": "803be59291ea5ab71433eba14e38344159a5587ab0ccfde908875b2a7f59cba9",
+    "manifestDigest": "dc9fe4315eae2a348c3b109826f7b3d174a432330092490a424f99303ab80dae",
+    "artifactSetDigest": "7e9122b58e5c0bcdb02a523f4c732696a6ff7b8777a2aa96b890cce39045b28e",
+    "targetRepository": "MAMIJAismanager/MMJ-site",
+    "targetBranch": "main",
+    "baseCommitSha": "ea4fc89728e57915e67f09a22dad533673885e17",
+    "keyId": "mmj-publish-ed25519-bootstrap-2026-07",
+    "algorithm": "Ed25519",
+    "signedAt": "2026-07-18T10:45:00.000Z"
+  },
+  "signature": "4pYxBOg-9W-leEpxowDpz0n1KTjbo0skNtL9_4ttAAwhw1UZysMQxnTrfQSNpVtBpl3M5VhRhGkYmSywHIheAA"
+}

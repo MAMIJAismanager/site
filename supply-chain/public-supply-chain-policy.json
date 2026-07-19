@@ -1,0 +1,12 @@
+{
+  "builderDigest": "sha256:1471ea646673136b8308550ac14b36d847ffb21c24bc31828279e443c924e488",
+  "mode": "DEVELOPMENT_FIXTURE",
+  "node": "22.16.0",
+  "npm": "10.9.2",
+  "owner": "MMJ-05N-K",
+  "productionFixtureForbidden": true,
+  "registryOrigin": "https://registry.npmjs.org/",
+  "requireFullActionCommitPins": true,
+  "requireReproducibleBuild": true,
+  "schemaVersion": 1
+}

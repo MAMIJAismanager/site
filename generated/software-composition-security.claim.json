@@ -1,0 +1,22 @@
+{
+  "advisorySnapshotDigest": "sha256:a730303e5747051f19d074587afa844f08ccc7b758cfc7d5280836739982bd13",
+  "buildProvenanceDigest": "sha256:b5c4730deac675dbc848bfe1c92c9b756dece0d579cb85724cde46a86b39c7af",
+  "claimId": "scc_62c1d2508925c492c0902e17",
+  "criticalCount": 2,
+  "fixtureOnly": true,
+  "highCount": 1,
+  "issuedAt": "2026-07-18T17:00:00.000Z",
+  "keyId": "mmj-software-composition-security-ed25519-fixture-2026-07",
+  "mode": "DEVELOPMENT_FIXTURE",
+  "nonWaivableCount": 3,
+  "policyDigest": "sha256:8f03fa3ff80e18e486ad7efd8cac51abb99ec0931303162a086b8e639481a839",
+  "privateEvaluationDigest": "sha256:67ec88e577b237690114082574d95ca76a78fb6a8d4c0ca8ecf6bcdfda1994f8",
+  "promotionSequence": 1,
+  "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+  "sbomDigest": "sha256:244a27c46387b0a89c2167e5dc45ebd8403099c64426ff467ce901deaefff9d5",
+  "schemaVersion": 1,
+  "sealedArtifactDigest": "sha256:33754762cefaadb228f611e1d7c3f73114e78610344bfb13046b75d9e24a7a9b",
+  "signature": "/zgjvLYVC+2ixuBHexwyi4zvxOWmq3Z+0aZPgGhmAYB0f2MaMQXDTCRdEoXgVkk+s0bZKwQQzDJZPknwZRoUBQ==",
+  "validUntil": "2026-07-19T17:00:00.000Z",
+  "verdict": "BLOCKED"
+}

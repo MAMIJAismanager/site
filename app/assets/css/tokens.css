@@ -1,0 +1,100 @@
+:root {
+  --mm-cool-gray-0: #f7f8f9;
+  --mm-cool-gray-1: #eceff1;
+  --mm-cool-gray-2: #e3e7eb;
+  --mm-cool-gray-3: #d8dce1;
+  --mm-cool-gray-4: #c5cbd1;
+  --mm-cool-gray-5: #adb5bd;
+  --mm-cool-gray-6: #7d8790;
+  --mm-cool-gray-7: #616a73;
+  --mm-cool-gray-8: #535b63;
+  --mm-cool-gray-9: #2c3238;
+
+  --mm-ink-950: #171a1e;
+  --mm-paper-50: #f7f8f9;
+
+  --mm-color-page: var(--mm-cool-gray-3);
+  --mm-color-surface: var(--mm-cool-gray-7);
+  --mm-color-surface-hover: var(--mm-cool-gray-8);
+  --mm-color-surface-subtle: var(--mm-cool-gray-2);
+
+  --mm-color-text: var(--mm-ink-950);
+  --mm-color-text-muted: #4b535c;
+  --mm-color-on-surface: var(--mm-paper-50);
+  --mm-color-on-surface-muted: #e6e9ec;
+
+  --mm-color-border: var(--mm-cool-gray-5);
+  --mm-color-border-strong: var(--mm-cool-gray-6);
+  --mm-color-focus: var(--mm-ink-950);
+  --mm-color-focus-on-dark: var(--mm-paper-50);
+
+  --mm-font-sans:
+    'Noto Sans KR',
+    'Noto Sans CJK KR',
+    'Apple SD Gothic Neo',
+    'Malgun Gothic',
+    sans-serif;
+
+  --mm-font-weight-regular: 400;
+  --mm-font-weight-semibold: 600;
+  --mm-font-weight-bold: 700;
+
+  --mm-font-size-caption: 0.8125rem;
+  --mm-font-size-small: 0.875rem;
+  --mm-font-size-body: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+  --mm-font-size-subheading: clamp(1.125rem, 1.04rem + 0.35vw, 1.375rem);
+  --mm-font-size-section: clamp(1.5rem, 1.25rem + 1vw, 2.25rem);
+  --mm-font-size-page-title: clamp(2.25rem, 1.7rem + 2.5vw, 4.75rem);
+  --mm-font-size-display: clamp(3rem, 2rem + 4.5vw, 7.5rem);
+
+  --mm-line-height-tight: 1.05;
+  --mm-line-height-heading: 1.18;
+  --mm-line-height-body: 1.65;
+  --mm-line-height-meta: 1.45;
+
+  --mm-letter-spacing-display: -0.045em;
+  --mm-letter-spacing-heading: -0.025em;
+  --mm-letter-spacing-body: -0.01em;
+  --mm-letter-spacing-label: 0.04em;
+
+  --mm-space-0: 0;
+  --mm-space-1: 0.25rem;
+  --mm-space-2: 0.5rem;
+  --mm-space-3: 0.75rem;
+  --mm-space-4: 1rem;
+  --mm-space-5: 1.5rem;
+  --mm-space-6: 2rem;
+  --mm-space-7: 3rem;
+  --mm-space-8: 4rem;
+  --mm-space-9: 6rem;
+  --mm-space-10: 8rem;
+
+  --mm-content-max: 110rem;
+  --mm-copy-max: 46rem;
+  --mm-page-gutter: clamp(1rem, 2.5vw, 3rem);
+  --mm-section-gap: clamp(3rem, 6vw, 7rem);
+
+  --mm-radius-small: 0.625rem;
+  --mm-radius-medium: 1rem;
+  --mm-radius-large: 1.5rem;
+  --mm-radius-round: 999rem;
+
+  --mm-duration-fast: 120ms;
+  --mm-duration-normal: 200ms;
+  --mm-duration-slow: 320ms;
+  --mm-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --mm-duration-fast: 1ms;
+    --mm-duration-normal: 1ms;
+    --mm-duration-slow: 1ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

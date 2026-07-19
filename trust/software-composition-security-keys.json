@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "algorithm": "Ed25519",
+      "keyId": "mmj-software-composition-security-ed25519-fixture-2026-07",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAulB70Z7NwuWsDvdu/RuNBLk7+R77z98HGSUU9ujfjMc=\n-----END PUBLIC KEY-----\n",
+      "status": "fixture-only",
+      "validForProduction": false
+    }
+  ],
+  "schemaVersion": 1
+}

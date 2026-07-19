@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "purpose": "governance-authorization",
+  "registrySequence": 2,
+  "previousRegistryDigest": "sha256:7b6e96b29fd0d7f5bf49026bddeab88c7e659ceabe0b38c9c12080eb6787e8de",
+  "status": "candidate-fixture",
+  "fixtureOnly": true,
+  "validForProduction": false,
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "keys": [
+    {
+      "keyId": "mmj-governance-authorization-ed25519-candidate-fixture-2026-07-4",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA6QrQoeJSkVu5KvKa5KjUvo7msNWXuo0kEUKqsZv1fsY=\n-----END PUBLIC KEY-----\n",
+      "publicKeyFingerprint": "sha256:f4b42a9f32c869e7511e1ed7a1f1acede804ee90388c100071143fcedb5e1f10",
+      "status": "candidate-fixture",
+      "fixtureOnly": true,
+      "validForProduction": false
+    }
+  ],
+  "candidateStatementDigest": "sha256:cddd3b1cb7fbe2e025e59208f96ce60e71919c7b951e7f41fdaac254a8de0e76"
+}

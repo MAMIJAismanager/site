@@ -1,0 +1,13 @@
+{
+  "fixtureOnly": true,
+  "keyId": "mmj-build-provenance-ed25519-fixture-2026-07",
+  "mode": "DEVELOPMENT_FIXTURE",
+  "payloadTreeDigest": "sha256:624211d7016985bf7fbbf29be3582621187a731894c8dfcc4ccd06bb744638d8",
+  "provenanceDigest": "sha256:b5c4730deac675dbc848bfe1c92c9b756dece0d579cb85724cde46a86b39c7af",
+  "schemaVersion": 1,
+  "sealedArtifactDigest": "sha256:33754762cefaadb228f611e1d7c3f73114e78610344bfb13046b75d9e24a7a9b",
+  "sealedArtifactSize": 4037733,
+  "signature": "ttLz+o56159BV9bijAfP6gUXa3esQ/x2iMgdi/1ZJg1c6ik3MV75DeETnkQaGd8nHI9WRyCvz5XpwPzOfspLDw==",
+  "signedAt": "2026-07-18T16:00:00.000Z",
+  "statementType": "MMJ_BUILD_ARTIFACT_SEAL"
+}

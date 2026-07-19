@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "purpose": "release-admission-root",
+  "registrySequence": 2,
+  "previousRegistryDigest": "sha256:f0a72ed18c2c082a29e7556b7d39f2ceb13683d28e6989764d9722cda8b7b56c",
+  "status": "candidate-fixture",
+  "fixtureOnly": true,
+  "validForProduction": false,
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "keys": [
+    {
+      "keyId": "mmj-release-admission-root-ed25519-candidate-fixture-2026-07-6",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAdEo0ae1mS0nD4n7GAfdf2i3+/dyQJ4/Vwy1eq7ZDqbU=\n-----END PUBLIC KEY-----\n",
+      "publicKeyFingerprint": "sha256:c0b2fd2d2cccb39f138def692700f0775e8d4cc2ea2bba9228a816a10c424bb6",
+      "status": "candidate-fixture",
+      "fixtureOnly": true,
+      "validForProduction": false
+    }
+  ],
+  "candidateStatementDigest": "sha256:379996bca37ab4f83ea79310e1728a452dac7aa6d2b49fe9aa730b7dcba3d9e1"
+}

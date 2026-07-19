@@ -1,0 +1,12 @@
+{
+  "baselineCommit": "ROOT_COMMIT",
+  "baselineTreeDigest": "sha256:1f9dce711ed732b84d077356091b8d1c160dc1431b0000cc8a014d7db9491215",
+  "establishedAt": "2026-07-18T16:00:00.000Z",
+  "forbiddenPathPolicyDigest": "sha256:30b59e3e0e5f71d3ce6edb64ccc7ab351d425016d51d18767cf81d62f337e739",
+  "repository": "MAMIJAismanager/MMJ-site",
+  "scannerPolicyDigest": "sha256:43e50e1841152a1de0d7c6faf0d147deb6a8e18f14ddae35f3e5b495c729049b",
+  "schemaVersion": 1,
+  "status": "clean-history-bootstrap-05n-o",
+  "packageTreeDigest": "sha256:1f9dce711ed732b84d077356091b8d1c160dc1431b0000cc8a014d7db9491215",
+  "updatedAt": "2026-07-19T03:30:00.000Z"
+}

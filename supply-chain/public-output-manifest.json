@@ -1,0 +1,378 @@
+{
+  "entries": [
+    {
+      "digest": "sha256:5641d0031bcddeffac4b0ab85e3dc93e6a9c3cf789b1f49165eadd7eea674d57",
+      "mode": 420,
+      "path": "_headers",
+      "size": 457,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420,
+      "path": "_mmj/.gitkeep",
+      "size": 0,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:5cd40ddf5009b6cb73960ea983793329cbe55fcc8c1454fd6dd753338099685a",
+      "mode": 420,
+      "path": "_mmj/release.json",
+      "size": 281,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a4f30c577799e12eb00fafd4a0d9ebe297486169d7a0abc12f0faad83a60e9b9",
+      "mode": 420,
+      "path": "_nuxt/_slug_.DA73X7I2.css",
+      "size": 7855,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:405bade81c95ee4605e62375bf5adf45546f27c117139ae27ba561f5fd47a20a",
+      "mode": 420,
+      "path": "_nuxt/01.Baa2gD_J.svg",
+      "size": 848070,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:9a3b0b95226f8856cee464cbc1ec4d5e4fd379c9e2a21929d37678f6fe397de5",
+      "mode": 420,
+      "path": "_nuxt/02.DMaJjOBC.svg",
+      "size": 849810,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:ab120a0e2abbbea55fa015314653a33f862a0b4124b8fcfd0fa1386928ff5522",
+      "mode": 420,
+      "path": "_nuxt/03.DE_JE20h.svg",
+      "size": 858230,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:4156e6e371c5a6693dcfccbbc8feb16bc0111b4580074dbb9441f01610b2baf3",
+      "mode": 420,
+      "path": "_nuxt/04.BvdBcnuH.svg",
+      "size": 856566,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:f6ceb4c15fcaf606886feba443e83b2fc29e5822642b1ba45f3c0dc613c7ab09",
+      "mode": 420,
+      "path": "_nuxt/05.DnyY0F8F.svg",
+      "size": 849534,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:17cc98c815bbb60971aa9185665ef37982ee0760493abddadf12876e01471a3c",
+      "mode": 420,
+      "path": "_nuxt/06.aHyZtjbL.svg",
+      "size": 853331,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:21d883c5c6701373999df9a8c87badc78ea3e1f9af58f91d01a3b2b29eb8fc82",
+      "mode": 420,
+      "path": "_nuxt/1i6mFsR6.js",
+      "size": 38803,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:d321b9271134c56b6f31a0664aaae79c893414ef4b26910fa9bb57dc59bd7e1f",
+      "mode": 420,
+      "path": "_nuxt/3vp3E9PN.js",
+      "size": 3812,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:2946844eee46ae421c294b5c36a7a9a3dc22115e0fe8c44f8fbfc93d531c777a",
+      "mode": 420,
+      "path": "_nuxt/82pcJKBg.js",
+      "size": 180375,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a3cc09833af78efbc8aaa83a08cb1e75771f877bd93b96466fa2e11052419f2f",
+      "mode": 420,
+      "path": "_nuxt/B10wHMn-.js",
+      "size": 3023,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:903c33f5e15010714e533cd6dca954f9ec6341837d7c1cfdcd2a58ca9f72c7a7",
+      "mode": 420,
+      "path": "_nuxt/B7-C_6hi.js",
+      "size": 18844,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:5294601506a2643b054b3966f0e3f7f616fdb45d145c24495e0d9264b3475715",
+      "mode": 420,
+      "path": "_nuxt/builds/latest.json",
+      "size": 52,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:cb3b032c24777a5d053980f9c4e98cc6e0ff761c476704d45005a2956b5480d8",
+      "mode": 420,
+      "path": "_nuxt/builds/meta/mmj-05n-k-fixture.json",
+      "size": 241,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:97e0432e4a17c7b2e65645974a67079c1cb4a1d515e5d29a9ea0361ac3fbad47",
+      "mode": 420,
+      "path": "_nuxt/C5UZH0Lb.js",
+      "size": 2666,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:5605b2a9045f9d2429dde62319a6eef958bed5574c5c5324e15e7169ef636267",
+      "mode": 420,
+      "path": "_nuxt/CJe6rE7D.js",
+      "size": 1790,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:7ff0d9f91606dab67fd6a5b8785e94c8d63aad7599ba3351cbe46ae41ed49a12",
+      "mode": 420,
+      "path": "_nuxt/CjrFuC1x.js",
+      "size": 10349,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a9ec128e4d8b8b29da09e023124627ad730c6d05240784adb9de1dbc4cfd9641",
+      "mode": 420,
+      "path": "_nuxt/CJs5xdC_.js",
+      "size": 2485,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:3e986302eaf0aef903b401a454972fa78230a272560b7b6a7260504342d0f8de",
+      "mode": 420,
+      "path": "_nuxt/CjxahkXg.js",
+      "size": 5107,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:994bf01398bd448d80b1b106421d6853753284173b92c9b4e0cf71e89c134f62",
+      "mode": 420,
+      "path": "_nuxt/CnWeAZqM.js",
+      "size": 48325,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:fc3506d46f3eba9bdfc3343fcdf2f23fedbe91bcf5afd88907633033d38622fb",
+      "mode": 420,
+      "path": "_nuxt/CQ0UXcCu.js",
+      "size": 3499,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b957b95f067dc47fcaa80384d5f9c3015164a05453b069cfea838c32a2be154e",
+      "mode": 420,
+      "path": "_nuxt/D1z-lgVG.js",
+      "size": 318,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:792d824340afb76a4968b9db99b0fe0f109d9b52d21fcc96826eb78c05b924ca",
+      "mode": 420,
+      "path": "_nuxt/daEqpCFJ.js",
+      "size": 13405,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:890d8884ab72494a2b8b94d6f6023e558e202e5462ef0c9c500eb057f74c054a",
+      "mode": 420,
+      "path": "_nuxt/default.gXTUoa0h.css",
+      "size": 1437,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:65949b64db1ab139a0f39cbe62035a93da3be6d06b859fd373cc378ad49b8562",
+      "mode": 420,
+      "path": "_nuxt/DQ3DQrRK.js",
+      "size": 1364,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:2cf906b427c56e26666453b998a213a41df79cae5ff3418c731e5ab5cdc1d129",
+      "mode": 420,
+      "path": "_nuxt/DyfTCvwG.js",
+      "size": 555,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:f64907fc45364781fdb762e413110643cb70dff0c86d2d4ff53186e2b8e1be8e",
+      "mode": 420,
+      "path": "_nuxt/e7XMDaYI.js",
+      "size": 24845,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a3224bc14a5c4240b9e0a8e8373118c3dcc937a7a94c62e4d811feb37f1b9f3f",
+      "mode": 420,
+      "path": "_nuxt/entry.6nHo86Je.css",
+      "size": 13449,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:8351012b285956ded10c93674ae5c5e5112b519a68cf70aefa4ab8aa4297b235",
+      "mode": 420,
+      "path": "_nuxt/error-404.uf7-JO-j.css",
+      "size": 2430,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:325d58980cf9236b885a2922a562e13bf5ccc6595ee45c949d3269d70d3b479f",
+      "mode": 420,
+      "path": "_nuxt/error-500.CHLIJhcO.css",
+      "size": 1907,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a983559f889b80b08340ba4c6c3eccf3dd439ab11b40117d09ec01fec0cb8dc9",
+      "mode": 420,
+      "path": "_nuxt/index.BSROWue_.css",
+      "size": 22455,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:575997df7e4347f40e80e2956d7aa6f301c2250681d6b5c2a61701ee613f5645",
+      "mode": 420,
+      "path": "_nuxt/ngbiqqNe.js",
+      "size": 976,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a61f9fdfdf7c681b6dab14e3cecd5ded0454b7326833fcc3c5294f60a81a9552",
+      "mode": 420,
+      "path": "_nuxt/portfolio-project-views.BbxUuijX.css",
+      "size": 957,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:a6cc1d4553a45c18189611b0d84295ac8943a85334436f61a9f9aed20c2bd38d",
+      "mode": 420,
+      "path": "_nuxt/site-information.BKuXN4Bw.css",
+      "size": 4013,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:0f70b7893416bbf8ac54e3929c7382d137d667b5657c890b8bbabd541afe2c90",
+      "mode": 420,
+      "path": "200.html",
+      "size": 1785,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:0f70b7893416bbf8ac54e3929c7382d137d667b5657c890b8bbabd541afe2c90",
+      "mode": 420,
+      "path": "404.html",
+      "size": 1785,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "about/_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:228687634389567487adef0691a8283e601633682a65b5b14141d77fa6e60c0b",
+      "mode": 420,
+      "path": "about/index.html",
+      "size": 11415,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "contact/_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:8005137bca39a376e5c432ef3d719970503dc6454b675a2b6ab1065ba42416b5",
+      "mode": 420,
+      "path": "contact/index.html",
+      "size": 11016,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:2a78e2d85ce5084dc879865af0ff6eaeadbad38d897654c1d3570657cd930456",
+      "mode": 420,
+      "path": "index.html",
+      "size": 65944,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "works/_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:8a6cc14fd6fdbdbd918cec1399997868e0a76e6bbeb79b62b5f8e6fb3642113a",
+      "mode": 420,
+      "path": "works/index.html",
+      "size": 9698,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "works/published-work/_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:22125dd125a1ca8f95a68bb242b6a1ddf18b78afb31bcd52bbaf601cc841203a",
+      "mode": 420,
+      "path": "works/published-work/index.html",
+      "size": 21779,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "works/scheduled-due/_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:018effcb17e0c6c0a80128eb241a6a62488c16b061c20a13df3fe42da56babd7",
+      "mode": 420,
+      "path": "works/scheduled-due/index.html",
+      "size": 20196,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:b86a9873e7f2786d03fa1245bff694d9d30c1d759369c83e999c1b8679c0d7fb",
+      "mode": 420,
+      "path": "works/voice-synthesis-engine-assistant/_payload.json",
+      "size": 69,
+      "type": "file"
+    },
+    {
+      "digest": "sha256:28bfa07c3208040e64c968149e4880a3ffd3d8e256d3b478a5030815326b4fa7",
+      "mode": 420,
+      "path": "works/voice-synthesis-engine-assistant/index.html",
+      "size": 21859,
+      "type": "file"
+    }
+  ],
+  "generatedAt": "2026-07-18T16:00:00.000Z",
+  "schemaVersion": 1,
+  "treeDigest": "sha256:624211d7016985bf7fbbf29be3582621187a731894c8dfcc4ccd06bb744638d8"
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "purpose": "software-composition-security",
+  "registrySequence": 2,
+  "previousRegistryDigest": "sha256:928ec0bea346a48e41fe88f40479e40b7bf04e6adc75656bbe3c28cefea1fbe7",
+  "status": "candidate-fixture",
+  "fixtureOnly": true,
+  "validForProduction": false,
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "keys": [
+    {
+      "keyId": "mmj-software-composition-security-ed25519-candidate-fixture-2026-07-5",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAuJfG8DmukLQwNsmDTSL0Xgzc3yhqqaSVjGxfeTD7gdA=\n-----END PUBLIC KEY-----\n",
+      "publicKeyFingerprint": "sha256:0f31346ba886e5d520b86879989ed5c750c17d74f7ad82b29c97b0f30bba457b",
+      "status": "candidate-fixture",
+      "fixtureOnly": true,
+      "validForProduction": false
+    }
+  ],
+  "candidateStatementDigest": "sha256:9667b6f8210623c9d89e737c585484ccfe33c82264828877db434bc9facc33a4"
+}

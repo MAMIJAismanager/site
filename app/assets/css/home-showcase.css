@@ -1,0 +1,1050 @@
+.mm-showcase {
+  display: grid;
+  min-width: 0;
+  gap: var(--mm-space-4);
+  margin-block-start: clamp(
+    var(--mm-space-7),
+    7vw,
+    var(--mm-space-10)
+  );
+}
+
+.mm-showcase__heading {
+  margin: 0;
+}
+
+.mm-showcase__heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--mm-space-4);
+  min-width: 0;
+}
+
+.mm-showcase__preview-label {
+  flex: 0 0 auto;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--mm-color-border-strong);
+  border-radius: var(--mm-radius-round);
+  color: var(--mm-color-text-muted);
+  font-size: var(--mm-font-size-caption);
+  font-weight: var(--mm-font-weight-semibold);
+  letter-spacing: var(--mm-letter-spacing-label);
+}
+
+.mm-showcase__empty {
+  display: grid;
+  gap: var(--mm-space-4);
+  max-width: var(--mm-copy-max);
+  padding: clamp(var(--mm-space-5), 4vw, var(--mm-space-8));
+  border: 1px solid var(--mm-color-border-strong);
+  border-radius: var(--mm-radius-large);
+}
+
+.mm-showcase__empty :last-child {
+  margin-block-end: 0;
+}
+
+.mm-showcase__empty-link,
+.mm-showcase-stage__detail-link {
+  width: fit-content;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  font-weight: var(--mm-font-weight-semibold);
+  text-underline-offset: 0.25em;
+}
+
+/*
+ * MMJ-UI05 magazine rail.
+ * The viewport and focus zone do not move. Cards exchange roles between
+ * the large focus profile and the smaller queued magazine profiles.
+ */
+.mm-showcase__magazine-viewport {
+  position: relative;
+  min-width: 0;
+  min-height: clamp(31rem, 50vw, 46rem);
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--mm-radius-large);
+  background:
+    linear-gradient(
+      130deg,
+      #182432 0%,
+      #344454 48%,
+      #606b74 100%
+    );
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08);
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.mm-showcase__ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 21% 46%,
+      rgb(255 255 255 / 0.14),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 79% 40%,
+      rgb(132 170 202 / 0.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(10 17 25 / 0.32),
+      transparent 48%,
+      rgb(10 17 25 / 0.24)
+    );
+}
+
+.mm-showcase[data-mm-showcase-phase='dragging']
+.mm-showcase__magazine-viewport {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.mm-showcase__magazine-card {
+  position: absolute;
+  left: var(--mm-card-x-desktop, 106%);
+  top: var(--mm-card-y-desktop, 34%);
+  z-index: var(--mm-card-z, 1);
+  width: var(--mm-card-width-desktop, 11%);
+  height: var(--mm-card-height-desktop, 32%);
+  min-width: 0;
+  opacity: var(--mm-card-opacity-desktop, 0);
+  transform: translateZ(0) scale(var(--mm-card-scale-desktop, 0.88));
+  transform-origin: 50% 50%;
+  filter:
+    saturate(var(--mm-card-saturation-desktop, 0.42))
+    brightness(var(--mm-card-brightness, 0.72));
+  will-change: left, top, width, height, transform, opacity, filter;
+  transition:
+    left var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    top var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    width var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    height var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    transform var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    opacity var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    filter var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase[data-mm-showcase-transition='disabled']
+.mm-showcase__magazine-card {
+  transition: none;
+}
+
+.mm-showcase__magazine-card::before {
+  position: absolute;
+  inset: -0.55rem;
+  z-index: -1;
+  border-radius: calc(var(--mm-radius-large) + 0.55rem);
+  background:
+    radial-gradient(
+      circle at 50% 54%,
+      hsl(var(--mm-card-hue, 210) 66% 64% / 0.24),
+      transparent 68%
+    );
+  content: '';
+  opacity: var(--mm-card-glow-opacity, 0.18);
+  transition: opacity var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase__magazine-card--active {
+  pointer-events: auto;
+}
+
+.mm-showcase__magazine-selector {
+  position: absolute;
+  inset: 0;
+  z-index: 80;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.mm-showcase__magazine-selector[data-mm-active='true'] {
+  pointer-events: none;
+}
+
+.mm-showcase__magazine-selector:focus-visible {
+  outline: 3px solid var(--mm-color-focus-on-dark);
+  outline-offset: 0.35rem;
+}
+
+.mm-showcase-stage {
+  --mm-gateway-title-parenthetical-size: 0.4em;
+  --mm-gateway-title-parenthetical-weight: 500;
+  --mm-gateway-title-parenthetical-leading: 1.1;
+
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  border-radius: var(--mm-card-radius, var(--mm-radius-medium));
+  background:
+    linear-gradient(
+      140deg,
+      hsl(var(--mm-card-hue, 210) 42% 25%),
+      hsl(var(--mm-card-hue, 210) 24% 16%)
+    );
+  color: var(--mm-color-on-surface);
+  box-shadow:
+    0 var(--mm-card-shadow-y, 0.7rem)
+    var(--mm-card-shadow-blur, 1.6rem)
+    rgb(4 9 14 / var(--mm-card-shadow-alpha, 0.18));
+}
+
+.mm-showcase-stage__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: auto;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      150deg,
+      hsl(var(--mm-card-hue, 210) 38% 28%),
+      hsl(calc(var(--mm-card-hue, 210) + 28) 34% 15%)
+    );
+}
+
+.mm-showcase-stage__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 42%,
+      rgb(8 14 21 / var(--mm-card-shade-soft, 0)) 51%,
+      rgb(8 14 21 / var(--mm-card-shade-strong, 0)) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgb(8 14 21 / 0.72) 0%,
+      transparent 45%
+    );
+}
+
+/*
+ * MMJ-UI22 category icon asset binding and rail composition.
+ * One shared icon stage interpolates between the compact-card upper region
+ * and the focus-card left region. SVG viewBox geometry remains untouched;
+ * only the containing box changes with magazine focus strength.
+ */
+.mm-showcase-stage__gateway-icon-stage {
+  position: absolute;
+  inset-inline-start: var(--mm-card-icon-x-desktop, 16%);
+  inset-block-start: var(--mm-card-icon-y-desktop, 8%);
+  z-index: 2;
+  display: grid;
+  width: var(--mm-card-icon-width-desktop, 58%);
+  height: var(--mm-card-icon-height-desktop, 56%);
+  min-width: 0;
+  min-height: 0;
+  place-items: center;
+  pointer-events: none;
+  user-select: none;
+  transition:
+    inset-inline-start var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    inset-block-start var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    width var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    height var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase-stage__gateway-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: translate3d(
+    var(--mm-card-preview-icon-offset-x, 0%),
+    var(--mm-card-preview-icon-offset-y, 0%),
+    0
+  ) scale(var(--mm-card-preview-icon-scale, 1));
+  transform-origin: center center;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform var(--mm-showcase-motion-duration, 1400ms)
+    var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase[data-mm-showcase-transition='disabled']
+.mm-showcase-stage__gateway-icon-stage {
+  transition: none;
+}
+
+
+.mm-showcase-stage__metadata {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: clamp(4.75rem, 5vw, 6.25rem);
+  z-index: 3;
+  display: grid;
+  width: min(30%, 25rem);
+  max-width: calc(100% - clamp(9rem, 12vw, 13rem));
+  min-width: 0;
+  align-content: center;
+  gap: clamp(var(--mm-space-2), 1.2vw, var(--mm-space-4));
+  padding: clamp(var(--mm-space-4), 2vw, var(--mm-space-7));
+  pointer-events: none;
+}
+
+.mm-showcase-stage__metadata > * {
+  opacity: var(--mm-card-text-opacity, 0);
+  transform: translate3d(
+    var(--mm-card-text-shift, 1.35rem),
+    var(--mm-card-text-lift, 0.55rem),
+    0
+  ) scale(var(--mm-card-text-scale, 0.985));
+  transform-origin: 0 50%;
+  filter: blur(var(--mm-card-text-blur, 9px));
+  will-change: opacity, transform, filter;
+  transition:
+    opacity var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    transform var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    filter var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+
+
+
+
+
+.mm-showcase__magazine-card--active
+.mm-showcase-stage__metadata {
+  pointer-events: auto;
+}
+
+.mm-showcase[data-mm-showcase-transition='disabled']
+.mm-showcase-stage__metadata > * {
+  transition: none;
+}
+
+.mm-showcase-stage__eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mm-space-2) var(--mm-space-4);
+  color: var(--mm-color-on-surface-muted);
+  font-size: var(--mm-font-size-small);
+  font-weight: var(--mm-font-weight-semibold);
+  line-height: var(--mm-line-height-meta);
+}
+
+.mm-showcase-stage__title {
+  margin: 0;
+  color: var(--mm-color-on-surface);
+  font-size: clamp(1.45rem, 1.55vw, 2.35rem);
+  line-height: var(--mm-line-height-heading);
+  letter-spacing: var(--mm-letter-spacing-heading);
+}
+
+.mm-showcase-stage__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mm-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mm-showcase-stage__roles li {
+  padding: var(--mm-space-1) var(--mm-space-3);
+  border: 1px solid currentColor;
+  border-radius: var(--mm-radius-round);
+  color: var(--mm-color-on-surface-muted);
+  font-size: var(--mm-font-size-caption);
+  line-height: var(--mm-line-height-meta);
+}
+
+.mm-showcase-stage__summary {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--mm-color-on-surface-muted);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.mm-showcase-stage__detail-link {
+  color: var(--mm-color-on-surface);
+}
+
+.mm-showcase-stage__detail-link--preview {
+  min-height: auto;
+  color: var(--mm-color-on-surface-muted);
+  font-size: var(--mm-font-size-caption);
+  text-decoration: none;
+}
+
+.mm-showcase-stage__profile {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 4;
+  display: grid;
+  gap: 0.18rem;
+  min-width: 0;
+  padding: clamp(0.7rem, 1.25vw, 1.15rem);
+  background:
+    linear-gradient(
+      0deg,
+      rgb(8 14 21 / 0.94),
+      rgb(8 14 21 / 0.64) 72%,
+      transparent
+    );
+  opacity: var(--mm-card-compact, 1);
+  transform: translate3d(0, var(--mm-card-profile-shift, 0), 0);
+  transition:
+    opacity var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    transform var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase-stage__profile-index {
+  color: rgb(255 255 255 / 0.64);
+  font-size: clamp(0.68rem, 0.7vw, 0.8rem);
+  font-weight: var(--mm-font-weight-semibold);
+  letter-spacing: 0.12em;
+}
+
+.mm-showcase-stage__profile-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--mm-color-on-surface);
+  font-size: clamp(0.78rem, 0.85vw, 1rem);
+  font-weight: var(--mm-font-weight-bold);
+  line-height: 1.28;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.mm-showcase-stage__profile-meta {
+  overflow: hidden;
+  color: rgb(255 255 255 / 0.6);
+  font-size: clamp(0.65rem, 0.7vw, 0.78rem);
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mm-showcase-stage__counter {
+  position: absolute;
+  inset-inline-start: clamp(var(--mm-space-3), 1.25vw, var(--mm-space-5));
+  inset-block-start: clamp(var(--mm-space-3), 1.25vw, var(--mm-space-5));
+  z-index: 5;
+  color: rgb(255 255 255 / 0.76);
+  font-size: clamp(0.68rem, 0.72vw, 0.86rem);
+  font-weight: var(--mm-font-weight-semibold);
+  letter-spacing: 0.12em;
+  opacity: var(--mm-card-focus, 0);
+}
+
+/*
+ * MMJ-UI10 focus-card edge navigation.
+ * Controls are owned by the active card, sit at its left/right center,
+ * and never participate in the viewport drag gesture.
+ */
+.mm-showcase-stage__controls {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.mm-showcase-stage__arrow {
+  position: absolute;
+  inset-block-start: 50%;
+  display: inline-grid;
+  width: clamp(2.6rem, 3vw, 3.8rem);
+  height: clamp(4.25rem, 6vw, 6.25rem);
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(255 255 255 / 0.9);
+  font: inherit;
+  font-size: clamp(2.65rem, 3.2vw, 4.25rem);
+  font-weight: 200;
+  line-height: 1;
+  text-shadow: 0 0.15rem 0.8rem rgb(0 0 0 / 0.42);
+  cursor: pointer;
+  opacity: 0.82;
+  pointer-events: auto;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-drag: none;
+  transform: translate3d(0, -50%, 0);
+  transition:
+    opacity var(--mm-duration-fast) var(--mm-ease-standard),
+    transform var(--mm-duration-fast) var(--mm-ease-standard);
+}
+
+.mm-showcase-stage__arrow--previous {
+  inset-inline-start: clamp(0.65rem, 1.4vw, 1.45rem);
+}
+
+.mm-showcase-stage__arrow--next {
+  inset-inline-end: clamp(0.65rem, 1.4vw, 1.45rem);
+}
+
+.mm-showcase-stage__arrow:hover {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0) scale(1.06);
+}
+
+.mm-showcase-stage__arrow:active {
+  transform: translate3d(0, -50%, 0) scale(0.94);
+}
+
+.mm-showcase-stage__arrow:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.18rem;
+  opacity: 1;
+}
+
+.mm-showcase-controls-enter-active,
+.mm-showcase-controls-leave-active {
+  transition:
+    opacity 300ms var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    filter 340ms var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase-controls-enter-from,
+.mm-showcase-controls-leave-to {
+  opacity: 0;
+  filter: blur(2px);
+}
+
+@media (max-width: 63.999rem) {
+  .mm-showcase-stage__gateway-icon-stage {
+    inset-inline-start: var(--mm-card-icon-x-mobile, 18%);
+    inset-block-start: var(--mm-card-icon-y-mobile, 7%);
+    width: var(--mm-card-icon-width-mobile, 64%);
+    height: var(--mm-card-icon-height-mobile, 52%);
+  }
+
+  .mm-showcase__magazine-card {
+    left: var(--mm-card-x-mobile, 202%);
+    top: var(--mm-card-y-mobile, 21%);
+    width: var(--mm-card-width-mobile, 42%);
+    height: var(--mm-card-height-mobile, 58%);
+    opacity: var(--mm-card-opacity-mobile, 0);
+    transform: translateZ(0) scale(var(--mm-card-scale-mobile, 0.88));
+    filter:
+      saturate(var(--mm-card-saturation-mobile, 0.42))
+      brightness(var(--mm-card-brightness, 0.72));
+  }
+
+  .mm-showcase-stage__shade {
+    background:
+      linear-gradient(
+        0deg,
+        rgb(8 14 21 / var(--mm-card-mobile-shade-base, 0.68)) 0%,
+        rgb(8 14 21 / var(--mm-card-mobile-shade-mid, 0)) 55%,
+        transparent 78%
+      );
+  }
+
+  .mm-showcase-stage__metadata {
+    inset-block: auto 0;
+    inset-inline: 0;
+    width: 100%;
+    max-height: 56%;
+    align-content: end;
+    padding: clamp(var(--mm-space-4), 5vw, var(--mm-space-6));
+  }
+
+  .mm-showcase-stage__summary {
+    -webkit-line-clamp: 2;
+  }
+
+  .mm-showcase-stage__arrow {
+    width: 2.75rem;
+    height: 4.5rem;
+    font-size: clamp(2.7rem, 11vw, 3.65rem);
+  }
+
+  .mm-showcase-stage__arrow--previous {
+    inset-inline-start: clamp(0.15rem, 2vw, 0.55rem);
+  }
+
+  .mm-showcase-stage__arrow--next {
+    inset-inline-end: clamp(0.15rem, 2vw, 0.55rem);
+  }
+
+}
+
+@media (max-width: 38rem) {
+  .mm-showcase__heading-row {
+    align-items: flex-start;
+  }
+
+  .mm-showcase__preview-label {
+    max-width: 11rem;
+    text-align: end;
+  }
+
+  .mm-showcase__magazine-viewport {
+    min-height: 37rem;
+  }
+
+  .mm-showcase-stage__eyebrow {
+    font-size: var(--mm-font-size-caption);
+  }
+
+  .mm-showcase-stage__title {
+    font-size: clamp(1.35rem, 6vw, 2rem);
+  }
+
+  .mm-showcase-stage__roles,
+  .mm-showcase-stage__detail-link--preview {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-showcase__magazine-card,
+  .mm-showcase__magazine-card::before,
+  .mm-showcase-stage__metadata > *,
+  .mm-showcase-stage__profile,
+  .mm-showcase-stage__gateway-icon-stage,
+  .mm-showcase-stage__gateway-icon,
+  .mm-showcase-stage__arrow,
+  .mm-showcase-controls-enter-active,
+  .mm-showcase-controls-leave-active {
+    transition-duration: 1ms;
+    transition-delay: 0ms;
+  }
+}
+
+/* MMJ-UI12 category gateway semantics. */
+.mm-showcase-stage[data-mm-gateway-stage='true'] {
+  cursor: pointer;
+}
+
+.mm-showcase-stage__title-line {
+  display: block;
+}
+
+.mm-showcase-stage__title-parenthetical {
+  display: inline-block;
+  font-size: var(--mm-gateway-title-parenthetical-size);
+  font-weight: var(--mm-gateway-title-parenthetical-weight);
+  line-height: var(--mm-gateway-title-parenthetical-leading);
+  letter-spacing: 0;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+}
+
+@media (max-width: 40rem) {
+  .mm-showcase-stage__title-parenthetical {
+    white-space: normal;
+  }
+}
+
+.mm-showcase-stage[data-mm-gateway-stage='true']
+.mm-showcase-stage__detail-link {
+  pointer-events: auto;
+}
+
+/* MMJ-UI14 deterministic right-aligned gateway title layout. */
+.mm-showcase-stage[data-mm-gateway-stage='true']
+.mm-showcase-stage__metadata {
+  width: min(42%, 31rem);
+}
+
+.mm-showcase-stage[data-mm-gateway-stage='true']
+.mm-showcase-stage__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 100%;
+  row-gap: 0.08em;
+  text-align: right;
+  line-height: 0.98;
+  transform-origin: 100% 50%;
+}
+
+.mm-showcase-stage__title-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 100%;
+  row-gap: 0.08em;
+}
+
+.mm-showcase-stage__title-layout--mobile {
+  display: none;
+}
+
+.mm-showcase-stage__title-line {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mm-showcase-stage__title-text,
+.mm-showcase-stage__title-space,
+.mm-showcase-stage__title-symbol {
+  flex: 0 0 auto;
+}
+
+.mm-showcase-stage__title-symbol {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+@media (max-width: 48rem) {
+  .mm-showcase-stage__title-layout--desktop {
+    display: none;
+  }
+
+  .mm-showcase-stage__title-layout--mobile {
+    display: flex;
+  }
+
+  .mm-showcase-stage[data-mm-gateway-stage='true']
+  .mm-showcase-stage__metadata {
+    width: auto;
+  }
+}
+
+/*
+ * MMJ-UI15 left-aligned stable copy stage.
+ * Gateway copy no longer rides inside each moving magazine card. The focus
+ * geometry stays fixed while current and incoming copy layers crossfade at
+ * one shared coordinate without any horizontal transform.
+ */
+.mm-showcase-stage[data-mm-gateway-stage='true']
+.mm-showcase-stage__metadata {
+  display: none;
+}
+
+.mm-showcase-copy-stage {
+  --mm-gateway-focus-title-line-height: 1.3;
+  --mm-gateway-focus-title-row-gap: 0em;
+  --mm-gateway-eyebrow-to-title-gap: clamp(0.75rem, 0.85vw, 1rem);
+  --mm-gateway-title-to-description-gap: clamp(0.95rem, 1.05vw, 1.25rem);
+  --mm-gateway-copy-body-start: 28%;
+  position: absolute;
+  inset-block: 10%;
+  inset-inline-start: 26%;
+  z-index: 95;
+  width: clamp(16rem, 17.5vw, 21rem);
+  --mm-copy-focus-delay: 200ms;
+  --mm-copy-focus-reveal-duration: 640ms;
+  min-width: 0;
+  color: var(--mm-color-on-surface);
+  pointer-events: none;
+}
+
+.mm-showcase-copy-stage__layer {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  min-width: 0;
+  opacity: var(--mm-copy-opacity, 0);
+  transform: translate3d(0, var(--mm-copy-translate-y, 0), 0);
+  filter: blur(var(--mm-copy-blur, 0));
+  will-change: opacity, transform, filter;
+  transition:
+    opacity var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    transform var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1)),
+    filter var(--mm-showcase-motion-duration, 1400ms) var(--mm-showcase-motion-ease, cubic-bezier(0.55, 0, 0.45, 1));
+}
+
+.mm-showcase[data-mm-showcase-transition='disabled']
+.mm-showcase-copy-stage__layer {
+  transition: none;
+}
+
+.mm-showcase-copy-stage__layer--incoming {
+  pointer-events: none;
+}
+
+.mm-showcase-copy-stage__layer--delayed-reveal {
+  animation:
+    mm-showcase-copy-focus-reveal
+    var(--mm-copy-focus-reveal-duration)
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--mm-copy-focus-delay)
+    both;
+}
+
+@keyframes mm-showcase-copy-focus-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.5rem, 0);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+/*
+ * MMJ-UI20 adaptive title-to-body flow.
+ * The copy stage keeps one fixed origin while each layer uses intrinsic title
+ * height. Summary and CTA follow normal document flow instead of consuming a
+ * reserved multi-line title slot.
+ */
+.mm-showcase-copy-stage__body {
+  position: absolute;
+  inset-block-start: var(--mm-gateway-copy-body-start);
+  inset-inline: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  gap: 0;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+/*
+ * MMJ-UI21 copy-stage category entry surface.
+ * The settled copy body is one local entry surface. Pointer drags still bubble
+ * to the magazine viewport, while native link dragging and text selection are
+ * disabled. The pseudo-element expands the hit area without moving copy.
+ */
+.mm-showcase-copy-stage__entry {
+  --mm-copy-entry-hit-inline: clamp(0.75rem, 1vw, 1.1rem);
+  --mm-copy-entry-hit-block: clamp(0.65rem, 0.85vw, 0.95rem);
+
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+.mm-showcase-copy-stage__entry::before {
+  position: absolute;
+  inset-block: calc(var(--mm-copy-entry-hit-block) * -1);
+  inset-inline: calc(var(--mm-copy-entry-hit-inline) * -1);
+  content: '';
+}
+
+.mm-showcase-copy-stage__entry[data-mm-ui21-entry-enabled='true'] {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.mm-showcase-copy-stage__entry:focus-visible {
+  border-radius: 0.25rem;
+  outline: 2px solid currentColor;
+  outline-offset: 0.55rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mm-showcase-copy-stage__entry[data-mm-ui21-entry-enabled='true']:hover {
+    opacity: 0.92;
+  }
+}
+
+.mm-showcase-copy-stage__entry[data-mm-ui21-entry-enabled='true']:active {
+  opacity: 0.84;
+}
+
+.mm-showcase-copy-stage__eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--mm-space-2) var(--mm-space-4);
+  width: 100%;
+  color: var(--mm-color-on-surface-muted);
+  font-size: var(--mm-font-size-small);
+  font-weight: var(--mm-font-weight-semibold);
+  line-height: var(--mm-line-height-meta);
+  text-align: left;
+}
+
+.mm-showcase-copy-stage__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: var(--mm-gateway-eyebrow-to-title-gap) 0 0;
+  color: var(--mm-color-on-surface);
+  font-size: clamp(1.45rem, 1.55vw, 2.35rem);
+  line-height: var(--mm-gateway-focus-title-line-height);
+  letter-spacing: var(--mm-letter-spacing-heading);
+  row-gap: var(--mm-gateway-focus-title-row-gap);
+  text-align: left;
+}
+
+.mm-showcase-copy-stage__title-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  row-gap: var(--mm-gateway-focus-title-row-gap);
+  text-align: left;
+}
+
+.mm-showcase-copy-stage__title-layout--mobile {
+  display: none;
+}
+
+.mm-showcase-copy-stage__title-line {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 0;
+  line-height: inherit;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mm-showcase-copy-stage__title-text,
+.mm-showcase-copy-stage__title-space,
+.mm-showcase-copy-stage__title-symbol,
+.mm-showcase-copy-stage__title-parenthetical {
+  flex: 0 0 auto;
+}
+
+.mm-showcase-copy-stage__title-symbol {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/*
+ * MMJ-UI17 parenthetical atomic inline token.
+ * Parenthetical ranges remain one indivisible auxiliary token attached to
+ * the preceding title text group. They never own a line-break opportunity.
+ */
+.mm-showcase-copy-stage__title-parenthetical {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: baseline;
+  font-size: 0.4em;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.mm-showcase-copy-stage__summary {
+  display: -webkit-box;
+  overflow: hidden;
+  width: 100%;
+  margin: var(--mm-gateway-title-to-description-gap) 0 0;
+  color: var(--mm-color-on-surface-muted);
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+
+@media (max-width: 63.999rem) {
+  .mm-showcase-copy-stage {
+    inset-block: auto 8%;
+    inset-inline: 15%;
+    width: auto;
+    height: 50%;
+  }
+
+  .mm-showcase-copy-stage__layer {
+    align-items: end;
+  }
+
+  .mm-showcase-copy-stage__body {
+    inset-block-start: 0;
+  }
+
+  .mm-showcase-copy-stage__title-layout--desktop {
+    display: none;
+  }
+
+  .mm-showcase-copy-stage__title-layout--mobile {
+    display: flex;
+  }
+
+  .mm-showcase-copy-stage__summary {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 40rem) {
+  .mm-showcase-copy-stage {
+    --mm-gateway-title-to-description-gap: clamp(0.8rem, 3.5vw, 1rem);
+    inset-block-end: 7%;
+    inset-inline: 14%;
+    height: 52%;
+  }
+
+  .mm-showcase-copy-stage__eyebrow {
+    font-size: var(--mm-font-size-caption);
+  }
+
+  .mm-showcase-copy-stage__title {
+    font-size: clamp(1.35rem, 6vw, 2rem);
+  }
+
+  .mm-showcase-copy-stage__title-parenthetical {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-showcase-copy-stage__layer {
+    filter: none !important;
+    transform: none !important;
+    transition-duration: 1ms;
+    transition-delay: 0ms;
+  }
+
+  .mm-showcase-copy-stage__layer--delayed-reveal {
+    animation-name: mm-showcase-copy-focus-reveal-reduced;
+    animation-duration: 160ms;
+    animation-delay: var(--mm-copy-focus-delay);
+  }
+}
+
+@keyframes mm-showcase-copy-focus-reveal-reduced {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

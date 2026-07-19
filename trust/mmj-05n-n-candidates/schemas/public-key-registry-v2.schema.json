@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MMJ Public Key Registry V2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "purpose",
+    "registrySequence",
+    "keys"
+  ],
+  "additionalProperties": true
+}

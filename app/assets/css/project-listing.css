@@ -1,0 +1,180 @@
+.mm-works-index {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.mm-project-grid {
+  --mm-project-grid-gap: clamp(1rem, 1.2vw, 1.75rem);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--mm-project-grid-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mm-project-grid__item,
+.mm-project-card,
+.mm-project-card__link {
+  min-width: 0;
+  height: 100%;
+}
+
+.mm-project-card__link {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  border-radius: var(--mm-radius-medium);
+  background: var(--mm-color-surface);
+  color: var(--mm-color-on-surface);
+  text-decoration: none;
+  transition:
+    background-color
+    var(--mm-duration-fast)
+    var(--mm-ease-standard),
+    color
+    var(--mm-duration-fast)
+    var(--mm-ease-standard);
+}
+
+.mm-project-card-media {
+  min-width: 0;
+  background: var(--mm-color-surface-hover);
+}
+
+.mm-project-card-metadata {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  padding: clamp(1rem, 1.2vw, 1.5rem);
+}
+
+.mm-project-card-metadata__context {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--mm-space-2) var(--mm-space-4);
+  margin-block-end: var(--mm-space-3);
+}
+
+.mm-project-card-metadata__category,
+.mm-project-card-metadata__meta,
+.mm-project-card-metadata__title,
+.mm-project-card-metadata__roles {
+  margin: 0;
+}
+
+.mm-project-card-metadata__category {
+  font-size: var(--mm-font-size-caption);
+  font-weight: var(--mm-font-weight-semibold);
+  line-height: var(--mm-line-height-meta);
+  letter-spacing: var(--mm-letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.mm-project-card-metadata__meta {
+  color: var(--mm-color-on-surface-muted);
+  font-size: var(--mm-font-size-caption);
+  font-weight: var(--mm-font-weight-regular);
+  line-height: var(--mm-line-height-meta);
+}
+
+.mm-project-card-metadata__title {
+  min-width: 0;
+  font-size: var(--mm-font-size-subheading);
+  font-weight: var(--mm-font-weight-bold);
+  line-height: var(--mm-line-height-heading);
+  letter-spacing: var(--mm-letter-spacing-heading);
+  overflow-wrap: anywhere;
+}
+
+.mm-project-card-metadata__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mm-space-2) var(--mm-space-3);
+  margin-block-start: var(--mm-space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.mm-project-card-metadata__role {
+  color: var(--mm-color-on-surface-muted);
+  font-size: var(--mm-font-size-small);
+  font-weight: var(--mm-font-weight-semibold);
+  line-height: var(--mm-line-height-meta);
+}
+
+@media (hover: hover) {
+  .mm-project-card__link:hover {
+    background: var(--mm-color-surface-hover);
+  }
+}
+
+@media (min-width: 48rem) {
+  .mm-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 80rem) {
+  .mm-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 112rem) {
+  .mm-project-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 80rem) and (min-height: 45rem) {
+  .mm-works-index {
+    grid-template-rows: auto auto auto minmax(0, 1fr);
+    height: 100%;
+    min-height: 0;
+    gap: clamp(0.75rem, 1.35vh, 1.25rem);
+    padding-block: clamp(1.5rem, 2.65vh, 2rem);
+  }
+
+  .mm-works-index .mm-page__header {
+    gap: clamp(0.35rem, 0.7vh, 0.75rem);
+    max-width: none;
+  }
+
+  .mm-works-index .mm-page-title {
+    font-size: clamp(2.5rem, 3.2vw, 4rem);
+  }
+
+  .mm-works-index .mm-works-query {
+    max-width: none;
+    gap: clamp(0.75rem, 1vw, 1.25rem);
+    padding: clamp(0.75rem, 1.2vw, 1.25rem);
+  }
+
+  .mm-works-index .mm-project-grid {
+    min-height: 0;
+    align-content: start;
+  }
+
+  .mm-works-index .mm-project-card__link {
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .mm-works-index .mm-project-card-media {
+    min-height: 0;
+  }
+
+  .mm-works-index .mm-project-card-metadata {
+    padding: clamp(0.75rem, 0.95vw, 1rem);
+  }
+
+  .mm-works-index .mm-project-card-metadata__context {
+    margin-block-end: var(--mm-space-2);
+  }
+
+  .mm-works-index .mm-project-card-metadata__roles {
+    margin-block-start: var(--mm-space-2);
+  }
+}

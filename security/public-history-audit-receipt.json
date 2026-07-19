@@ -1,0 +1,13 @@
+{
+  "baselineCommit": "ROOT_COMMIT",
+  "baselineTreeDigest": "BOUND_BY_SECURITY_PUBLIC_HISTORY_BASELINE",
+  "checkedAt": "2026-07-19T02:30:00.000Z",
+  "forbiddenPathScan": "pass",
+  "fullHistoryScan": "proof-pass-live-repository-pending",
+  "gitRootBaselineProof": "pass",
+  "policyDigest": "sha256:43e50e1841152a1de0d7c6faf0d147deb6a8e18f14ddae35f3e5b495c729049b",
+  "repository": "MAMIJAismanager/MMJ-site",
+  "schemaVersion": 1,
+  "status": "clean-history-verified-05n-n",
+  "verifiedAt": "2026-07-19T02:30:00.000Z"
+}

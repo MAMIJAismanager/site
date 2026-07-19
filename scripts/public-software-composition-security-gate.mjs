@@ -1,0 +1,1 @@
+import {verifySecurityClaim} from './public-05n-l-common.mjs';const x=await verifySecurityClaim({allowFixture:process.argv.includes('--allow-fixture')});console.log(JSON.stringify({event:'PASS_MMJ_05N_L_PUBLIC_SECURITY_CLAIM',claimId:x.claimId,verdict:x.verdict,fixtureOnly:x.fixtureOnly},null,2));

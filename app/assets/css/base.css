@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  min-height: 100%;
+  background: var(--mm-color-page);
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  background: var(--mm-color-page);
+  color: var(--mm-color-text);
+  font-family: var(--mm-font-sans);
+  font-size: var(--mm-font-size-body);
+  font-weight: var(--mm-font-weight-regular);
+  line-height: var(--mm-line-height-body);
+  letter-spacing: var(--mm-letter-spacing-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure {
+  margin-block-start: 0;
+}
+
+::selection {
+  background: var(--mm-color-surface);
+  color: var(--mm-color-on-surface);
+}
+
+:where(
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  summary,
+  [tabindex]
+):focus-visible {
+  outline: 3px solid var(--mm-color-focus);
+  outline-offset: 4px;
+}
+
+.mm-dark-surface {
+  --mm-color-focus: var(--mm-color-focus-on-dark);
+}

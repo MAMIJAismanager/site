@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "contract": "MMJ-05N-C",
+  "keys": [
+    {
+      "keyId": "mmj-publish-ed25519-bootstrap-2026-07",
+      "algorithm": "Ed25519",
+      "publicKeySpkiBase64": "MCowBQYDK2VwAyEA3Nj6EzH8Dxe8Ie0QJaUYcbBHjDrS/16q8fYNxGJ5d/g=",
+      "validFromSequence": 1,
+      "validThroughSequence": 1,
+      "status": "retired"
+    }
+  ]
+}

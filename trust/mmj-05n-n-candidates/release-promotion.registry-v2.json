@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "purpose": "release-promotion",
+  "registrySequence": 2,
+  "previousRegistryDigest": "sha256:b649d0e1d0f3fbb9dfb9d8a9236800f34801188c2c01b2087f04a8c5489186e1",
+  "status": "candidate-fixture",
+  "fixtureOnly": true,
+  "validForProduction": false,
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "keys": [
+    {
+      "keyId": "mmj-release-promotion-ed25519-candidate-fixture-2026-07-1",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAUpBz6C9OU/th6Y7xNbGP8rz4ZXCuxfGHPlyKJjxXneE=\n-----END PUBLIC KEY-----\n",
+      "publicKeyFingerprint": "sha256:19a8820057e46c9c32b1fb8a2b21032bd3266acaa16141e12ab49db956cdc804",
+      "status": "candidate-fixture",
+      "fixtureOnly": true,
+      "validForProduction": false
+    }
+  ],
+  "candidateStatementDigest": "sha256:eab1662c77342af19466968bc6aec46195d1d25062a77faaf6ccca73b3d927ac"
+}

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+  "promotionSequence": 1,
+  "publicCommit": "ROOT_COMMIT",
+  "buildAttestationDigest": "sha256:c1511fa15e6554c1d3baff5d7c7198fb0f9acc87a288e425b886b707a6104537",
+  "generatedAt": "2026-07-18T10:45:00.000Z"
+}

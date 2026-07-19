@@ -1,0 +1,64 @@
+.mm-home-page {
+  display: grid;
+  gap: clamp(var(--mm-space-7), 6vw, var(--mm-space-9));
+}
+
+@media (min-width: 80rem) and (min-height: 45rem) {
+  .mm-layout--viewport-home {
+    grid-template-rows: auto minmax(0, 1fr);
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .mm-layout--viewport-home .mm-main {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .mm-home-page {
+    grid-template-rows: auto minmax(0, 1fr);
+    height: 100%;
+    min-height: 0;
+    gap: clamp(var(--mm-space-6), 3.5vh, var(--mm-space-8));
+    padding-block: clamp(
+      var(--mm-space-5),
+      3.2vh,
+      var(--mm-space-7)
+    );
+  }
+
+  .mm-home-page .mm-page__header {
+    gap: clamp(var(--mm-space-2), 1vh, var(--mm-space-4));
+    max-width: none;
+  }
+
+  .mm-home-page .mm-display-title {
+    font-size: clamp(4rem, 4.75vw, 5.75rem);
+  }
+
+  .mm-home-page .mm-page__lead {
+    max-width: none;
+    line-height: 1.35;
+  }
+
+  .mm-home-page .mm-showcase {
+    position: relative;
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: 0;
+    gap: clamp(var(--mm-space-2), 1.25vh, var(--mm-space-4));
+    margin-block-start: 0;
+  }
+
+  .mm-home-page .mm-showcase__magazine-viewport {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 79.999rem), (max-height: 44.999rem) {
+  .mm-home-page {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,1 @@
+import {verifyPassport} from './public-05n-m-common.mjs';const x=await verifyPassport({allowFixture:process.argv.includes('--allow-fixture')});console.log(JSON.stringify({event:'PASS_MMJ_05N_M_PUBLIC_PASSPORT',passportId:x.passport.passportId,verdict:x.passport.admissionVerdict,fixtureOnly:x.passport.fixtureOnly},null,2));

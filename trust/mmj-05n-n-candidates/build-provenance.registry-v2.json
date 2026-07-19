@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "purpose": "build-provenance",
+  "registrySequence": 2,
+  "previousRegistryDigest": "sha256:55e347bf6a460f22671598ccc0eb26251f0cfcaabb6ff30917cec1e05f33300a",
+  "status": "candidate-fixture",
+  "fixtureOnly": true,
+  "validForProduction": false,
+  "proofOfPossessionReceiptDigest": "sha256:d1a9ff6fa88f3f6ec62df104062d082a8c28fda23533a7116f2ef3cb1959bf6a",
+  "keys": [
+    {
+      "keyId": "mmj-build-provenance-ed25519-candidate-fixture-2026-07-2",
+      "algorithm": "Ed25519",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA9dZiB0ZclbM5dkomkFvBToRLoIfHxjocgmIuVcDjsQg=\n-----END PUBLIC KEY-----\n",
+      "publicKeyFingerprint": "sha256:3f684a79e98e5b505adbfbe2debc3ec84e43f54d472c0800a498692dc0b221a4",
+      "status": "candidate-fixture",
+      "fixtureOnly": true,
+      "validForProduction": false
+    }
+  ],
+  "candidateStatementDigest": "sha256:bd1de97ef92b7700ba670840902722ee6f7c014be6b52de52af3bc12bc9d32c4"
+}

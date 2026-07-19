@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "owner": "MMJ-05N-I",
+  "claimId": "crc_137da63eb42986fcaf271960",
+  "fixtureOnly": true,
+  "targetRepository": "MAMIJAismanager/MMJ-site",
+  "targetBranch": "main",
+  "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+  "promotionSequence": 1,
+  "continuityPolicyVersion": "2026-07-18.1",
+  "continuityPolicyDigest": "sha256:18ca7fe2fca4eb45aedea6a2e6c49ada6ba43fe22f41153f9e7c7f8b81e698d2",
+  "readinessVerdict": "INACTIVE",
+  "issuedAt": "2026-07-18T14:00:00.000Z",
+  "validUntil": "2026-07-19T12:45:00.000Z",
+  "privateReceiptDigest": "sha256:5793ce9d547a40c5614b6d1e088f13ed86e6e01e03bb22132a26a471a4ba5927",
+  "signingKeyId": "mmj-continuity-readiness-bake-proof-2026-07",
+  "signatureAlgorithm": "Ed25519",
+  "signature": "HAlYandcSLUMWkQUpajdw9s5XhX2aqVDyokXL1w32IHtwPz-F7xWaEbNiJuhO16ii1EJlg3GMXOFcB54mUwrCw"
+}

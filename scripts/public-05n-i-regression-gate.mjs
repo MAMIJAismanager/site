@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdtemp,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';import path from 'node:path';import {spawnSync} from 'node:child_process';
+const root=path.resolve(new URL('..',import.meta.url).pathname);const claimPath=path.join(root,'generated/publication-readiness.claim.json');const original=await readFile(claimPath,'utf8');let cases=0;
+const run=(args=[],env={})=>spawnSync(process.execPath,['scripts/public-continuity-readiness-claim-gate.mjs',...args],{cwd:root,env:{...process.env,...env},encoding:'utf8'});
+let r=run(['--allow-fixture']);if(r.status!==0)throw new Error(r.stderr||r.stdout);cases++;
+r=run();if(r.status===0||!(r.stderr+r.stdout).includes('MMJ_05N_I_FIXTURE_CLAIM_FORBIDDEN'))throw new Error('fixture strict gate');cases++;
+const claim=JSON.parse(original);claim.releaseId='rel_tampered';await writeFile(claimPath,JSON.stringify(claim,null,2)+'\n');r=run(['--allow-fixture']);if(r.status===0||!(r.stderr+r.stdout).includes('MMJ_05N_I_CLAIM_RELEASE_MISMATCH'))throw new Error('release tamper');cases++;
+await writeFile(claimPath,original);const sig=JSON.parse(original);sig.signature=sig.signature.slice(0,-1)+(sig.signature.endsWith('A')?'B':'A');await writeFile(claimPath,JSON.stringify(sig,null,2)+'\n');r=run(['--allow-fixture']);if(r.status===0||!(r.stderr+r.stdout).includes('MMJ_05N_I_CLAIM_SIGNATURE_INVALID'))throw new Error('signature tamper');cases++;
+await writeFile(claimPath,original);const extra=JSON.parse(original);extra.archiveProvider='forbidden';await writeFile(claimPath,JSON.stringify(extra,null,2)+'\n');r=run(['--allow-fixture']);if(r.status===0||!(r.stderr+r.stdout).includes('MMJ_05N_I_PUBLIC_CLAIM_SCHEMA_DRIFT'))throw new Error('disclosure');cases++;
+await writeFile(claimPath,original);console.log(JSON.stringify({gate:'PASS_MMJ_05N_I_PUBLIC_REGRESSION',caseCount:cases},null,2));

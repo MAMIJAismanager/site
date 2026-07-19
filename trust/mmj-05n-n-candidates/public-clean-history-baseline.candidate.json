@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 2,
+  "repository": "MAMIJAismanager/MMJ-site",
+  "branch": "main",
+  "status": "fixture-simulation-only",
+  "remoteVerified": false,
+  "fixtureOnly": true,
+  "productionAllowed": false,
+  "establishedAt": "2026-07-19T02:30:00.000Z"
+}

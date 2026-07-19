@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 2,
+  "contract": "MMJ-05N-B",
+  "releaseId": "rel_cc7d0df51d6bfe571aa0578843",
+  "snapshotDigest": "cc7d0df51d6bfe571aa05788439fe71d545f2d7f5c6bc2d50b215b5a7f81c34e",
+  "routesDigest": "05a77616c2e75f764db011ec6dd7bbf9fc4658c2efcf4596c68f6b4de7c316e3",
+  "bundleDigest": "803be59291ea5ab71433eba14e38344159a5587ab0ccfde908875b2a7f59cba9",
+  "projectCount": 3,
+  "assetCount": 5,
+  "publicationCutoff": "2026-07-12T00:00:00Z",
+  "generatedAt": "2026-07-18T09:45:47.563Z"
+}
